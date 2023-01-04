@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기타선택자</title>
+    <link rel="stylesheet" href="./resources/CSS/stylesheet.css">
+    <!--
+        외부 스타일 방식 : 스타일 정보만을 따로 관리하는 css외부문서를 만들고,
+                          link태그를 통해 연결시켜주는 방법
+    -->
+</head>
+<body>
+    <h2>1. 속성 선택자</h2>
+    <p name="hi">
+        스타일을 부여하고자 하는 요소내에 작성되어 있는 속성을 이용해서 선택하는 방법
+        선택자 뒤에 []를 이용해서 속성과 속성값을 제시해서 선택하는 방법
+    </p>
+    <pre>
+        선택자[속성=속성값] 
+        선택자[속성~=속성값]
+        선택자[속성|=속성값]
+        선택자[속성^=속성값]
+        선택자[속성$=속성값]
+        선택자[속성*=속성값] {
+            스타일 속성 : 속성값;
+        }
+    </pre>
+
+    <!--.div-class[name=name$]*4-->
+    <div class="div-class" name="name1">div1</div>
+    <div class="div-class" name="name2">div2</div>
+    <div class="div-class" name="name3 name1">div3</div>
+    <div class="class-div" name="name4">div4</div>
+    
+    <hr>
+
+    <h2>2. 자손선택자와 후손선택자</h2>
+    <p>
+        자손 : 바로 하위인 요소들
+        후손 : 하위 요소들 전부 다 
+    </p>
+    <pre>
+        * 자손선택자(>)
+        a>b {
+            스타일 속성 : 속성값;
+        }
+        
+        * 후손선택자( )
+        a b {
+            스타일 속성 : 속성값;
+        }
+    </pre>
+
+    <div id="test1">
+        <h4>div의 자손이면서 후손이기도 합니다.</h4>
+        <h4>div의 자손이면서 후손이기도 합니다.</h4>
+        <ul>div의 자손이면서 후손이기도 합니다.
+            <li><h4>나는 li의 자손이면서 div의 후손입니다.</h4></li>
+            <li>ul의 자손이면서 div의 후손입니다.</li>
+            <li>ul의 자손이면서 div의 후손입니다.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>3. 동위(같은 레벨)선택자</h2>
+    <p>
+        동위 관계(같은 레벨)에 있는 뒤에 위치한 특정 요소를 선택할 때 사용
+    </p>
+    <pre>
+        * a요소 바로 뒤에 있는 b요소 "하나만"을 선택하는 선택자
+        a+b {
+            스타일 속성 : 속성값;
+        }
+
+        * a요소 뒤에 있는 "모든" b요소 다 선택
+        a~b {
+            스타일 속성 : 속성값;
+        }
+    </pre>
+
+    <div id="test2">div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <ul>ul요소</ul>
+    <div>안녕</div>
+</body>
+</html>
