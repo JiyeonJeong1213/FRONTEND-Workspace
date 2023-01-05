@@ -87,5 +87,90 @@
     <div>div4</div>
     <ul>ul요소</ul>
     <div>안녕</div>
+
+    <h2>4. 반응 선택자</h2>
+    <p>
+        사용자의 움직임에 따라 선택이 되거나 안되는 선택자
+    </p>
+    <pre>
+        * 해당 요소에 클릭이 되었을 경우 스타일 부여하고자
+        선택자:active {
+            스타일 속성 : 속성값;
+        }
+
+        * 해당 요소에 마우스가 올라가는 순간 스타일 부여
+        선택자:hover {
+            스타일 속성 : 속성값;
+        }
+    </pre>
+
+    <div id="active-test" class="area">active 테스트</div>
+    <br>
+    <div id="hover-test" class="area">hover 테스트</div>
+
+    <h2>5. 상태 선택자</h2>
+    <p>
+        요소의 상태에 따라서 선택되는 선택자
+    </p>
+    <pre>
+        1) 체크된(checked) 상태의 요소
+        선택자:checked {
+            스타일 속성 : 속성값;
+        }
+    </pre>
+
+    <input type="checkbox" id="apple">
+    <label for="apple">사과</label>
+    <input type="checkbox" id="banana">
+    <label for="banana">바나나</label>
+    <input type="checkbox" id="kiwi">
+    <label for="kiwi">키위</label>
+    
+    <br>
+
+    <pre>
+        2) 초점(focus)이 맞춰진 input요소 선택
+        선택자:focus {
+            스타일 속성 : 속성값;
+        }
+    </pre>
+
+    아이디 : 
+    <input type="text" name="userId" placeholder="아이디를 입력" required>
+    <br>
+    비밀번호 : 
+    <input type="password" name="userPwd" maxlength="15" required>
+
+    <br>
+
+    <pre>
+        3) 활성화 되어있는 요소들 선택
+        선택자:enabled {
+            스타일 속성 : 속성값;
+        }
+
+        4) 비활성화 되어있는 요소들 선택
+        선택자:disabled {
+            스타일 속성 : 속성값;
+        }
+    </pre>
+
+    <button>클릭가능</button>
+    <button disabled>클릭불가능</button>
+
+    <!-- 
+        에밋 자동완성 문법
+        #area1>h4+p>ul>li*3
+    -->
+    <div id="area1">
+        <h4></h4>
+        <p>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </p>
+    </div>
 </body>
 </html>

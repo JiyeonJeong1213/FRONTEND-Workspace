@@ -81,3 +81,46 @@ class속성값이 div-class인 애들 중 name속성값에 name3가 단어로써
 #test2~div {
     /* color: blue; */
 }
+
+/* 4. 반응 선택자 */
+.area {
+    background-color: bisque;
+    width: 100px;
+    height: 100px;
+}
+
+.area {
+    cursor: pointer;
+}
+
+#active-test:active {
+    background-color: aquamarine;
+    color: brown;
+}
+
+.area:hover {
+    color: blueviolet;
+}
+
+/* 5. 상태 선택자 */
+/* 기본적으로 해당 선택된 요소 자체에 스타일 반영 */
+input[type=checkbox]:checked {
+    width: 20px;
+    height: 20px;
+}
+input[type=checkbox]:checked+label {
+    font-size: 20;
+    background-color: lightsalmon;
+}
+
+/* input요소 중 name속성의 값이 user로 시작하는 요소를 선택한 후 focus상태일 때만 스타일 부여 */
+input[name^=user]:focus {
+    background-color: pink;
+}
+
+button:enabled {
+    background-color: lightseagreen;
+}
+button:disabled {
+    background-color: blanchedalmond;
+}

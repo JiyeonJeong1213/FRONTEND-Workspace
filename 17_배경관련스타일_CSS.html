@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 관련 스타일</title>
+    <style>
+        body {
+            background-color: bisque;
+        }
+        #div-bg {
+            background-color: aqua;
+            border: 30px solid blue;
+            padding: 20px;
+            width: 50%;
+            /* div의 content의 가로길이는 부모(body)요소의 50%로 지정하겠다. */
+            box-sizing: border-box;
+            /* 가로길이를 border까지 포함해서 지정하겠다 라는 뜻, 필수 */
+        }
+        .div-test {
+            margin: 30px;
+            border: 10px dashed;
+            padding: 20px;
+            background-color: lightpink;
+        }
+        #div1 {
+            background-clip: border-box;
+        }
+        #div2 {
+            background-clip: padding-box;
+        }
+        #div3 {
+            background-clip: content-box;
+        }
+        #bg-img {
+            border: 1px solid black;
+            width: 70%;
+            height: 800px;
+
+            background-image: url("resources/image/bono.jpg");
+            background-repeat: repeat-y; /* 사진들이 세로로만 반복됨 */
+            background-size: contain; /* 가로세로 상관 없이 둘 중에 하나가 가득 찰 때까지 크기를 맞춰줌*/
+            background-position: 50% 50%; /* center  center 또는 50px 50px */
+            background-attachment: fixed; /* 스크롤 이동이 있어도 그 자리 그대로 고정됨 */
+        }
+    </style>
+</head>
+<body>
+    <h1>배경 관련 스타일 (background~)</h1>
+
+    <h3>background-color : 배경색을 지정하고자 할 때 사용</h3>
+    <div id="div-bg">
+        피는 그들은 끝에 말이다. 더운지라 착목한는 소담스러운 하여도 이는 노래하며 내려온 것이다. 있음으로써 무엇을 싸인 공자는 이상의 튼튼하며, 듣는다. 찾아 새 용기가 것이다. 설레는 열매를 같은 얼마나 아름다우냐? 인간은 물방아 꽃이 이것은 이 피가 운다. 지혜는 무엇을 청춘에서만 고동을 아름다우냐? 그들에게 심장의 하였으며, 대한 것은 이상, 보이는 스며들어 반짝이는 것이다. 그러므로 있는 구할 약동하다. 위하여 인류의 아니한 꽃이 칼이다.
+    </div>
+
+    <hr>
+
+    <h3>background-clip : 배경을 적용시키고자 하는 범위를 지정할 때 사용</h3>
+    <pre>
+        선택자 {
+            background-clip : border-box(기본값)/padding-box/content-box;
+        }
+    </pre>
+
+    <div class="div-test" id="div1">
+        피는 그들은 끝에 말이다. 더운지라 착목한는 소담스러운 하여도 이는 노래하며 내려온 것이다. 있음으로써 무엇을 싸인 공자는 이상의 튼튼하며, 듣는다. 찾아 새 용기가 것이다. 설레는 열매를 같은 얼마나 아름다우냐? 인간은 물방아 꽃이 이것은 이 피가 운다. 지혜는 무엇을 청춘에서만 고동을 아름다우냐? 그들에게 심장의 하였으며, 대한 것은 이상, 보이는 스며들어 반짝이는 것이다. 그러므로 있는 구할 약동하다. 위하여 인류의 아니한 꽃이 칼이다.
+    </div>
+    <div class="div-test" id="div2">
+        피는 그들은 끝에 말이다. 더운지라 착목한는 소담스러운 하여도 이는 노래하며 내려온 것이다. 있음으로써 무엇을 싸인 공자는 이상의 튼튼하며, 듣는다. 찾아 새 용기가 것이다. 설레는 열매를 같은 얼마나 아름다우냐? 인간은 물방아 꽃이 이것은 이 피가 운다. 지혜는 무엇을 청춘에서만 고동을 아름다우냐? 그들에게 심장의 하였으며, 대한 것은 이상, 보이는 스며들어 반짝이는 것이다. 그러므로 있는 구할 약동하다. 위하여 인류의 아니한 꽃이 칼이다.
+    </div>
+    <div class="div-test" id="div3">
+        피는 그들은 끝에 말이다. 더운지라 착목한는 소담스러운 하여도 이는 노래하며 내려온 것이다. 있음으로써 무엇을 싸인 공자는 이상의 튼튼하며, 듣는다. 찾아 새 용기가 것이다. 설레는 열매를 같은 얼마나 아름다우냐? 인간은 물방아 꽃이 이것은 이 피가 운다. 지혜는 무엇을 청춘에서만 고동을 아름다우냐? 그들에게 심장의 하였으며, 대한 것은 이상, 보이는 스며들어 반짝이는 것이다. 그러므로 있는 구할 약동하다. 위하여 인류의 아니한 꽃이 칼이다.
+    </div>
+
+    <hr>
+
+    <h3>배경 이미지 테스트</h3>
+    <pre>
+        선택자 {
+            background-image : url(이미지경로);
+            background-repeat : repeat/repeat-x/repeat-y/no-repeat;
+            background-size : auto(기본값)/contain/cover/px px/%;
+            background-position : 좌/우/가운데 위/아래/가운데 px/% %;
+            background-attachment : scroll/fixed;
+        }
+    </pre>
+
+    <div id="bg-img"></div>
+</body>
+</html>
