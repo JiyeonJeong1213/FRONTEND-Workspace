@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃 관련 스타일2</title>
+    <style>
+        .positioning {
+            border: 1px solid black;
+        }
+        .outer {
+            border: 1px solid blue;
+            position: relative;
+            /* 기준이 되는 요소로 지정. 기준점을 줘서 절대적인 배치가 가능하게 함 */
+            /* 만약 기준점을 바로 위의 부모요소에 지정하지 않는다면 기준점이 자동으로 body영역에 잡힘 */
+        }
+        #first {
+            width: 300px;
+            height: 300px;
+            background-color: beige;
+        }
+        #second {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+            position: absolute;
+            /* 움직이고자 하는 요소내에 position : absolute를 지정하여 절대적인 위치로 움직일 수 있음 */
+            top: 50px;
+            left: 50px;
+            /* 부모요소(relative로 기준점을 준 요소)로 부터 각각 
+               위, 왼쪽에서 50px씩 위치시킴 */
+        }
+        #third {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        .fixed-area {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* position: fixed;
+            top: 0;
+            left: 0; */
+        }
+        .z-test {
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+            position: absolute;
+        }
+        #z1 {
+            background-color: rgb(255, 228, 196);
+            top: 100px;
+            left: 100px;
+            z-index: 10000;
+        }
+        #z2 {
+            background-color: lightseagreen;
+            top: 50px;
+            left: 50px;
+            z-index: 1000;
+        }
+        #z3 {
+            background-color: lightsalmon;
+            z-index: 1000000000000;
+            /* 값은 몇이 되든 상관x. 
+               단순히 값의 크기만으로 위쪽에 쌓을 것인가 아래쪽에 쌓을 것인가 결정됨 */
+            /* z-index의 숫자가 높을 수록 다른 요소들보다 위쪽에 쌓겠다는 뜻 */
+        }
+        .vis-test {
+            width: 100px;
+            height: 100px;
+        }
+        #vis {
+            /* display: none;  요소를 감춰주고 공간도 차지하지 않는다. */
+            visibility: hidden; /* 요소는 감춰주되 공간은 차지함 */}
+        .float-test {
+            border: 1px solid black;
+            width: 70px;
+            height: 30px;
+            float: left;
+            /* 오른쪽에서 부터 차례대로 공중으로 띄워져 있는 것
+               옆으로 이동 + z-index적용 */
+        }
+    </style>
+</head>
+<body>
+    <h1>배치 관련 스타일</h1>
+
+    <h3>position : 절대위치와 상대위치</h3>
+    <div class="outer">
+        <div id="first" class="positioning">첫번째 자식</div>
+        <div id="second" class="positioning">두번째 자식</div>
+        <div id="third" class="positioning">세번째 자식</div>
+    </div>
+
+    <h3>고정위치</h3>
+    <!-- 배경관련 스타일에서 background-attach : fixed와 비슷한 속성 -->
+    <div class="positioning fixed-area"></div>
+
+    <hr>
+
+    <h3>z-index</h3>
+    <p>
+        페이지 안의 요소들을 순서대로 위로 쌓는 속성
+    </p>
+    <div class="outer">
+        <div id="z1" class="z-test">첫번째 자식</div>
+        <div id="z2" class="z-test">두번째 자식</div>
+        <div id="z3" class="z-test">세번째 자식</div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <hr>
+
+    <h3>visibility</h3>
+    <p>
+        페이지에 특정요소를 보이거나 보이지 않게 하는 속성
+    </p>
+    <div class="vis-test" style="background-color: tomato;"></div>
+    <div id="vis" class="vis-test" style="background-color: lightseagreen;"></div>
+    <div class="vis-test" style="background-color: bisque;"></div>
+    <p>
+        visibility : hidden 속성은 공간은 차지하고 있지만
+        display : none은 공간마저도 차지하지 않음
+    </p>
+
+    <hr>
+
+    <h3>float</h3>
+    <p>
+        페이지 내의 요소들을 화면으로부터 띄워서
+        왼쪽, 오른쪽으로 배치하는 속성
+    </p>
+    <div class="float-test">요소1</div>
+    <div class="float-test">요소2</div>
+    <div class="float-test">요소3</div>
+    <div class="float-test">요소4</div>
+    <div class="float-test">요소5</div>
+
+    <br clear="both"> <!-- float속성을 해제할 때 쓰는 속성 -->
+    <!-- float속성을 쓰게 되면 그 이후에 적힌 요소들이 공중에 붕 뜨기 때문에 속성을 해지해줘야 함 -->
+    <span>호호</span>
+    <div>하이</div>
+    <div>호</div>
+</body>
+</html>

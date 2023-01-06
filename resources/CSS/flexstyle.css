@@ -1,0 +1,56 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: pink;
+    margin: 0 auto;
+    padding: 0px;
+    border: 1px solid black;
+    display: flex; 
+}
+div {
+    background-color: aqua;
+    margin: 10px;
+    padding: 10px;
+}
+.justify-content-test {
+    justify-content: space-evenly;
+}
+
+.flex-direction-test {
+    flex-direction: column-reverse;
+}
+
+
+.align-items-test {
+    flex-direction : column;
+    align-items: center;
+}
+
+.order-test1 {
+    background-color: yellowgreen;
+    order: 1;
+}
+.order-test2 {
+    background-color: yellow;
+    order: -1;
+}
+
+.align-self-test {
+    align-self: stretch;
+}
+
+.flex-wrap-test {
+    flex-wrap: wrap-reverse;
+}
+
+.flex-flow-test {
+    flex-flow: column wrap;
+    align-items: flex-start;
+    height: 200px;
+}
+.align-content-test {
+    flex-direction: column;
+    height: 300px;
+    flex-wrap: wrap;
+    align-content: space-between;
+}

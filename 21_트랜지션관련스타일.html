@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>트랜지션 관련 스타일</title>
+    <style>
+        img{
+            margin-left: 200px;
+            width: 200px;
+            height: 200px;
+        }
+        .translate:hover {
+            transform: translate(200px, 200px);
+        }
+        .translatex:active {
+            transform: translateX(500px);
+        }
+        .translatey:active {
+            transform: translateY(500px);
+        }
+        .translatez:active {
+            transform: perspective(200px) translateZ(100px);
+        }
+
+        h3~p {
+            margin-left: 200px;
+        }
+        .scale:hover {
+            transform: scale(1.5);
+        }
+        .scalex:hover {
+            transform: scalex(1.5);
+        }
+        .scaley:hover {
+            transform: scaleY(1.5);
+        }
+        .skew:hover {
+            /* transform: skew(30deg, 30deg); */
+            transform: skewY(30deg);
+        }
+
+        .transitiondiv {
+            width: 100px;
+            height: 100px;
+            border: 1px red solid;
+            transition-property: all;
+            transition-duration: 4s;
+            transition-timing-function: linear;
+        }
+
+        input:checked~.transition{
+            transform: translateX(2000px);
+        }
+
+        .transition:active {
+            background-color: lime;
+            transform: translateX(2000px);
+        }
+        .transi:hover {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <h1>트랜지션 관련 스타일</h1>
+    <h2>변형</h2>
+    <p>
+        태그가 특정 동작에 의해 변형되는 것
+        특정 동작 : 마우스 클릭, 마우스 오버, ... 
+        변형 : 이동, 확대, 삭제, 찌그러짐, ... 
+    </p>
+
+    <br><br><hr>
+
+    <h3>태그 이동시키기</h3>
+    <p>
+        translate함수를 이용하면 설정된 태그가 특정위치로 이동하게 됨
+    </p>
+
+    <img src="resources/image/peng.jpg" width="200px" height="200px" class="translate">
+    <br>
+
+    <img src="resources/image/peng.jpg" width="200px" height="200px" class="translatex">
+    <br>
+    
+    <img src="resources/image/peng.jpg" width="200px" height="200px" class="translatey">
+    <br>
+
+    <img src="resources/image/peng.jpg" width="200px" height="200px" class="translatez">
+    <br>
+
+    <br><br><hr>
+
+    <h3>태그 확대하기</h3>
+    <p class="scale">
+        안녕하세요
+    </p>
+
+    <p class="scalex">
+        뭐지?
+    </p>
+
+    <img src="resources/image/coffee.png" class="scaley">
+
+    <br><br><hr>
+
+    <h3>skew적용하기</h3>
+    <img src="resources/image/cat.jpg" class="skew">
+
+    <br><br><hr>
+
+    <h3>트랜지션 적용하기</h3>
+    <p>
+        태그가 변형속성에 의해 변형이 될 때 부드럽게 변형이 될 수 있게 해주는 속성
+        transition-property : 적용할 속성;
+        transition-duration : 지속시간;
+        transition-timing-function : liner, ease, ease-in, ease-out;
+        transition : 한번에 위속성을 모두 지정하는 방법
+    </p>
+
+    <input type="checkbox">
+    <div class="transitiondiv transition transi"></div>
+</body>
+</html>
