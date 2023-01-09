@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>푸터바 만들기</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            /* border: 1px solid salmon; */
+        }
+        #footer {
+            width: 1000px;
+            height: 150px;
+        }
+        #footer>div {
+            width: 100%;
+        }
+        #footer_1 {
+            height: 20%;
+        }
+        #footer_2 {
+            height: 80%;
+        }
+        #footer_2>p {
+            width: 100%;
+            /* border: 1px solid turquoise; */
+            margin: 0; /* 간격 없애기 
+            p태그에는 기본적으로 위, 아래 간격을 조정하는 margin값이 들어가있다. 
+            이 margin값을 0으로 만들어서 간격 없애기. */
+            box-sizing: border-box;
+            font-size: 13px;
+        }
+        #p1 {
+            height: 80%;
+            padding: 5px 15px;
+            /* 상하, 좌우 */
+        }
+        #p2 {
+            height: 20%;
+            text-align: center;
+        }
+        #footer_1>a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            margin: 15px;
+            vertical-align: middle;
+            /* 수직구조에서 가운데로 오게끔 해주는 속성 */
+        }
+    </style>
+</head>
+<body>
+    <div id="footer">
+        <div id="footer_1">
+            <a href="">이용약관</a> |
+            <a href="">개인정보취급방침</a> |
+            <a href="">인재채용</a> |
+            <a href="">고객센터</a>
+        </div>
+        <div id="footer_2">
+            <p id="p1">
+                강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F <br>
+                강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+                강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F <br>
+                종로지원 : 서울특별시 중구 남대문로 120 그레이츠 청계(구 대일빌딩) 2F, 3F <br>
+                당산지원 : 서울특별시 영등포구 선유동2로 57 이레빌딩(구관) 19F, 20F 
+            </p>
+            <p id="p2">
+                Copyright &copy; 1998-2023 KH Information Educational Institute All Right Reserved
+            </p>
+        </div>
+    </div>
+</body>
+</html>

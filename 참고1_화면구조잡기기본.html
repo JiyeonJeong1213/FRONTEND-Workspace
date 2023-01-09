@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면 구조 잡기 기본</title>
+    <style>
+        div {
+            box-sizing: border-box; /* 가로세로 길이를 테두리 영역까지 포함해서 계산 하겠다. */
+            border: 1px solid tomato;
+        }
+        .wrap {
+            width: 1000px;
+            height: 800px;
+            margin: auto; /* 좌우로 자동으로 요소를 정가운데 위치시켜 줌 */
+        }
+        /* 크게 세가지 영역 */
+        /* header, content, footer */
+        .wrap>div {
+            width: 100%;
+        }
+        #header, #footer {
+            height: 20%;
+        }
+        #content {
+            height: 60%;
+        }
+        #content>div {
+            height: 100%;
+            float : left;
+            /* 블럭요소인 div들을 옆으로 배치되게끔 해줌 */
+        }
+        #content_1 {
+            width: 20%;
+        }
+        #content_2 {
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="header"></div>
+        <div id="content">
+            <div id="content_1"></div>
+            <div id="content_2"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
