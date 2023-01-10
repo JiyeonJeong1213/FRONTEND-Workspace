@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-CLUB</title>
+    <style>
+        div, form {
+            box-sizing: border-box;
+            border: 1px solid lightgray;
+        }
+        .wrap {
+            width: 1348px;
+            height: 1661px;
+        }
+        #header {
+            width: 100%;
+            height: 200px;
+        }
+        #h-top {
+            height: 160px;
+            padding: 40px 50px;
+            border-top: 5px solid rgb(189, 147, 10);
+        }
+        #logo {
+            float: left;
+            line-height: 50px;
+        }
+        #logo>a {
+            text-decoration: none;
+            color: black;
+            font-size: 45px;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+        #top-menu-icon {
+            float: right;
+            line-height: 70px;
+        }
+        #top-menu-text {
+            float: right;
+            line-height: 60px;
+            margin-right: 10px;
+            color: gray;
+        }
+        #top-menu-text>a {
+            text-decoration: none;
+            color: gray;
+            font-size: 13px;
+        }
+        
+        #h-bottom {
+            height: 40px;
+        }
+        #navi {
+            height: 100%;
+            margin: 0;
+            padding: 0 50px;
+            list-style-type: none;
+            float: left;
+        }
+        #navi>li {
+            /* border: 1px solid ; */
+            height: 100%;
+            margin: 0 7px;
+            float: left;
+        }
+        ul[id=navi] a {
+            text-decoration: none;  
+            color: black;
+            font-size: 13px;
+            vertical-align: middle;
+        }
+        #color2 {
+            color: rgb(189, 147, 10);
+        }
+        #navi>li>ul {
+            list-style-type: none;
+            padding: 0;
+            display: none; 
+            background-color: rgba(255, 255, 255, 0.342);
+        }
+        #navi>li>ul a{
+            font-size: 13px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        #navi>li>a:hover+ul {
+            display: block;
+        }
+        #navi>li>ul:hover {
+            display: block;
+        }
+        #search-form {
+            padding-right: 50px;
+            float: right;
+        }
+        #search-form>div {
+            float: right;
+        }
+        
+        #content {
+            width: 100%;
+            height: 1092px;
+        }
+        #content_1 {
+            height: 426.5px;
+            /* border: 1px solid red; */
+            margin-bottom: 100px;
+        }
+        #focus_daily {
+            height: 20%;
+            text-align: center;
+            font-family: 'Nanum Myeongjo', serif;
+        }
+        #content_2 {
+            height: 565.5px;
+            /* border: 1px solid red; */
+            padding: 50px;
+        }
+        #footer {
+            height: 369px;
+            width: 100%;
+            border-top: 1px solid gray;
+
+        }
+        #f-top {
+            height: 316px;
+            padding: 0px 50px;
+            margin: auto;
+        }
+        #f-bottom {
+            height: 53px;
+            padding: 15px;
+            margin: auto;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="wrap">
+        <div id="header">
+            <div id="h-top">
+                <h1 id="logo"><a href="">K-CLUB</a></h1>
+                <div id="top-menu-icon">
+                    <a href=""><img src="./resources/image/free-icon-facebook-logo-4406234.png" width="20px"></a>
+                    <a href=""><img src="./resources/image/free-icon-instagram-1077042.png" width="20px"></a>
+                    <a href=""><img src="./resources/image/free-icon-youtube-160205.png" width="20px"></a>
+                </div>
+                <div id="top-menu-text">
+                    <a href="">LOGIN</a> |
+                    <a href="">JOIN</a> |
+                    <a href="">CART</a> |
+                    <a href="">ORDER</a> |
+                    <a href="">MY PAGE</a> |
+                    <a href="">NOTICE</a> |
+                    <a href="">Q&A</a> |
+                    <a href="">REVIEW</a> |
+                    <a href="">EVENT</a> | 
+                </div>
+                
+            </div>
+            <div id="h-bottom">
+                <ul id="navi">
+                    <li><a href=""><img src="./resources/image/free-icon-menu-8212733.png" width="30px"></a></li>
+                    <li>
+                        <a href="" id="color2">BLACKFRIDAY</a>
+                        <ul>
+                            <li><a href="">핸드메이드~60%</a></li>
+                            <li><a href="">BEST할인</a></li>
+                            <li><a href="">40%</a></li>
+                            <li><a href="">50%</a></li>
+                            <li><a href="">원가판매</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">BEST</a></li>
+                    <li>
+                        <a href="">메이드케이</a>
+                        <ul>
+                            <li><a href="">핸드메이드</a></li>
+                            <li><a href="">원피스</a></li>
+                            <li><a href="">아우터</a></li>
+                            <li><a href="">니트</a></li>
+                            <li><a href="">셔츠&블라우스</a></li>
+                            <li><a href="">하의</a></li>
+                            <li><a href="">탑</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">NEW</a></li>
+                    <li>
+                        <a href="">~99SIZE</a>
+                        <ul>
+                            <li><a href="">아우터</a></li>
+                            <li><a href="">원피스</a></li>
+                            <li><a href="">탑</a></li>
+                            <li><a href="">하의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">DRESS</a>
+                        <ul>
+                            <li><a href="">롱</a></li>
+                            <li><a href="">미니/미디</a></li>
+                            <li><a href="">패턴</a></li>
+                            <li><a href="">니트</a></li>
+                            <li><a href="">나시</a></li>
+                            <li><a href="">린넨</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">OUTER</a>
+                        <ul>
+                            <li><a href="">핸드메이드</a></li>
+                            <li><a href="">코트</a></li>
+                            <li><a href="">패딩/점퍼</a></li>
+                            <li><a href="">자켓</a></li>
+                            <li><a href="">가디건</a></li>
+                            <li><a href="">Set</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">KNIT</a>
+                        <ul>
+                            <li><a href="">니트티</a></li>
+                            <li><a href="">가디건</a></li>
+                            <li><a href="">베스트</a></li>
+                            <li><a href="">원피스</a></li>
+                            <li><a href="">팬츠/스커트</a></li>
+                            <li><a href="">세트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">PANTS</a>
+                        <ul>
+                            <li><a href="">슬랙스</a></li>
+                            <li><a href="">데님</a></li>
+                            <li><a href="">트레이닝/조거</a></li>
+                            <li><a href="">코튼/린넨</a></li>
+                            <li><a href="">반바지</a></li>
+                            <li><a href="">세트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">TOP</a>
+                        <ul>
+                            <li><a href="">맨투맨/후드</a></li>
+                            <li><a href="">티셔츠</a></li>
+                            <li><a href="">나시</a></li>
+                            <li><a href="">세트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">BLOUSE</a>
+                        <ul>
+                            <li><a href="">블라우스</a></li>
+                            <li><a href="">셔츠</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">SKIRT</a>
+                        <ul>
+                            <li><a href="">롱/미디</a></li>
+                            <li><a href="">미니</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">백&슈즈</a>
+                        <ul>
+                            <li><a href="">백</a></li>
+                            <li><a href="">슈즈</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">ACC</a>
+                        <ul>
+                            <li><a href="">머플러</a></li>
+                            <li><a href="">이너웨어</a></li>
+                            <li><a href="">홈웨어</a></li>
+                            <li><a href="">모자</a></li>
+                            <li><a href="">쥬얼리</a></li>
+                            <li><a href="">스윔웨어</a></li>
+                            <li><a href="">ETC</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="" id="color2">연말룩/하객룩</a></li>
+                </ul>
+                <form action="" id="search-form">
+                    <div id="search-btn">
+                        <input type="submit" value="찾기">
+                    </div>
+                    <div id="search-text">
+                        <input type="search" name="keyword">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="content">
+            <div id="content_1">
+                <div id="focus_daily">
+                    <h2>FOCUS DAILY</h2>
+                </div>
+                <div id="foto_d">
+                    <div id="fotos"></div>
+                    div
+                </div>
+            </div>
+            <div id="content_2"></div>
+        </div>
+        <div id="footer">
+            <div id="f-top"></div>
+            <div id="f-bottom"></div>
+        </div>
+    </div>
+</body>
+</html>
