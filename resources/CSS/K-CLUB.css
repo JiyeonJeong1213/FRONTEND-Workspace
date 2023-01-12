@@ -1,0 +1,302 @@
+div, form, a, li {
+    box-sizing: border-box;
+    /* border: 1px solid lightgray; */
+}
+.wrap {
+    width: 1348px;
+    height: 1661px;
+    position: relative;
+}
+#quick {
+    position: fixed;
+    top: 30%;
+    right: -1px;
+    width: 50px;
+    height: 300px;
+    border: 1px solid rgb(224, 223, 223);
+    background-color: white;
+}
+#quick>ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#quick li {
+    height: 50px;
+    border-bottom: 1px solid rgb(224, 223, 223);
+}
+
+#header {
+    width: 100%;
+    height: 200px;
+}
+#h-top {
+    height: 160px;
+    padding: 40px 50px;
+    border-top: 5px solid rgb(189, 147, 10);
+}
+#logo {
+    float: left;
+    line-height: 50px;
+}
+#logo>a {
+    text-decoration: none;
+    color: black;
+    font-size: 45px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+#top-menu-icon {
+    float: right;
+    line-height: 70px;
+}
+#top-menu-text {
+    float: right;
+    line-height: 60px;
+    margin-right: 10px;
+    color: gray;
+}
+#top-menu-text>a {
+    text-decoration: none;
+    color: gray;
+    font-size: 13px;
+}
+
+#h-bottom {
+    height: 40px;
+}
+#navi {
+    height: 100%;
+    margin: 0;
+    padding: 0 50px;
+    list-style-type: none;
+    float: left;
+}
+#navi>li {
+    /* border: 1px solid ; */
+    height: 100%;
+    margin: 0 7px;
+    float: left;
+}
+ul[id=navi] a {
+    text-decoration: none;  
+    color: black;
+    font-size: 13px;
+    vertical-align: middle;
+}
+#color2 {
+    color: rgb(189, 147, 10);
+}
+#navi>li>ul {
+    list-style-type: none;
+    padding: 0;
+    display: none; 
+    background-color: rgb(189, 147, 10);
+}
+#navi>li>ul a{
+    font-size: 13px;
+    color: rgba(0, 0, 0);
+}
+#navi>li>a:hover+ul {
+    display: block;
+}
+#navi>li>ul:hover {
+    display: block;
+}
+#search-form {
+    padding-right: 50px;
+    float: right;
+}
+#search-form>div {
+    float: right;
+}
+
+#content {
+    width: 100%;
+    height: 1092px;
+}
+#content_1 {
+    height: 426.5px;
+    /* border: 1px solid red; */
+    margin-bottom: 100px;
+}
+#focus_daily {
+    height: 20%;
+    text-align: center;
+    font-family: 'Nanum Myeongjo', serif;
+}
+#foto_d {
+    height: 80%;
+    padding: 0 50px;
+}
+#fotos {
+    display: flex;
+    justify-content: space-between;
+}
+#fotos img {
+    width: 289.5px;
+    margin-bottom: 20px;
+}
+#description {
+    display: flex;
+    justify-content: space-between;
+}
+#description>div {
+    width: 289.5px;
+}
+#description .d_t {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+#description .d_d{
+    color: gray;
+}
+
+#content_2 {
+    height: 565.5px;
+    /* border: 1px solid red; */
+    padding: 50px;
+    background-color: rgb(224, 223, 223);
+}
+#inner {
+    height: 465.5px;
+    width: 1248px;
+}
+#with_item {
+    height: 20%;
+    text-align: center;
+    font-family: 'Nanum Myeongjo', serif;
+}
+#item_menu {
+    /* display: flex;
+    justify-content: center; */
+    height: 50px;
+    text-align: center;
+    position: relative;
+}
+#item_menu>div {
+    display: inline-block;
+}
+#item_menu a {
+    width: 142px;
+    display: inline-block;
+    text-decoration: none;
+    color: #858585;
+    border: 1px gray solid;
+    background-color: #fff;
+    font-size: 14px;
+    border-radius: 30px;
+    padding: 8px 10px;
+    margin: 5px;
+    position: relative;
+}
+#item_foto {
+    width: 100%;
+    height: 311px;
+}
+#item_foto img {
+    padding-top: 10px;
+}
+#slide {
+    list-style-type: none;
+    overflow: hidden;
+}
+#slide>li {
+    float: left;
+}
+
+
+#footer {
+    height: 369px;
+    width: 100%;
+    border-top: 1px solid gray;
+}
+#f-top {
+    height: 316px;
+    padding: 0px 50px;
+    margin: auto;
+    border-bottom: 1px solid gray;
+    display: flex;
+}
+#f-top>div {
+    padding-top: 25px;
+}
+#f_1 {
+    width: 35%;
+    border-right: 1px solid gray;
+}
+#f-top h2 {
+    font-size: 13px;
+    padding-bottom: 10px;
+}
+#f-top p {
+    font-size: 12px;
+}
+#f-top p.ment {
+    font-size: 11px;
+    color: gray;
+}
+#f_1>p.copy {
+    font-size: 11px;
+    color: gray;
+}
+#f_1>p.ment>b, #f_1>p.copy>b {
+    color: black;
+}
+
+#f_2 {
+    width: 20%;
+    border-right: 1px solid gray;
+    padding-left: 30px ;
+    padding-right: 30px;
+}
+#f_2>p#number {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(189, 147, 10);
+}
+#button {
+    display: flex;
+    flex-wrap: wrap;
+}
+#button>a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    width: 80px;
+    border: 1px solid gray;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+#f_3 {
+    width: 22%;
+    border-right: 1px solid gray;
+    padding-left: 30px ;
+    padding-right: 30px;
+}
+
+#f_4 {
+    width: 23%;
+    padding-left: 30px ;
+    padding-right: 30px;
+}
+#f_4>h5 {
+    font-size: 12px;
+    color: rgb(189, 147, 10);
+}
+
+#f-bottom {
+    height: 53px;
+    padding: 15px;
+    margin: auto;
+    background-color: rgb(224, 223, 223);
+    text-align: center;
+}
+#f-bottom>a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    margin: 15px;
+}
