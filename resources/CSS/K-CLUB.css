@@ -160,23 +160,20 @@ ul[id=navi] a {
 #inner {
     height: 465.5px;
     width: 1248px;
+    text-align: center;
 }
 #with_item {
     height: 20%;
     text-align: center;
     font-family: 'Nanum Myeongjo', serif;
 }
-#item_menu {
-    /* display: flex;
-    justify-content: center; */
+
+#with_item~div {
     height: 50px;
-    text-align: center;
-    position: relative;
-}
-#item_menu>div {
     display: inline-block;
+    text-align: center;
 }
-#item_menu a {
+#with_item~div a {
     width: 142px;
     display: inline-block;
     text-decoration: none;
@@ -187,7 +184,6 @@ ul[id=navi] a {
     border-radius: 30px;
     padding: 8px 10px;
     margin: 5px;
-    position: relative;
 }
 #item_foto {
     width: 100%;
@@ -198,10 +194,31 @@ ul[id=navi] a {
 }
 #slide {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
     overflow: hidden;
 }
 #slide>li {
-    float: left;
+    display: inline-block;
+    width: 100%;
+    transition: all .5s;
+}
+
+#m_1:hover~#item_foto>#slide>#s_1 {
+    transform: translateX(0%);
+}
+#m_2:hover~#item_foto>#slide>#s_2 {
+    transform: translateX(-1258px);
+}
+#m_3:hover~#item_foto>#slide>#s_3 {
+    transform: translateX(-2506px);
+}
+#m_4:hover~#item_foto>#slide>#s_4 {
+    transform: translateX(-3759px);
+}
+#m_5:hover~#item_foto>#slide>#s_5 {
+    transform: translateX(-5010px);
 }
 
 
