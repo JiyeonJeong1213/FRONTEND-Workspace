@@ -188,6 +188,7 @@ ul[id=navi] a {
 #item_foto {
     width: 100%;
     height: 311px;
+    position: relative;
 }
 #item_foto img {
     padding-top: 10px;
@@ -196,13 +197,15 @@ ul[id=navi] a {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    white-space: nowrap;
-    overflow: hidden;
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
 }
 #slide>li {
     display: inline-block;
     width: 100%;
     transition: all .5s;
+    position: absolute;
+    left: 0px;
 }
 
 #m_1:hover~#item_foto>#slide>#s_1 {
