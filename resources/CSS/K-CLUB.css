@@ -7,6 +7,8 @@ div, form, a, li {
     height: 1661px;
     position: relative;
 }
+
+
 #quick {
     position: fixed;
     top: 30%;
@@ -17,14 +19,16 @@ div, form, a, li {
     background-color: white;
 }
 #quick>ul {
+    width: 100%;
+    height: 100%;
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 #quick li {
-    height: 50px;
     border-bottom: 1px solid rgb(224, 223, 223);
 }
+
 
 #header {
     width: 100%;
@@ -90,14 +94,15 @@ ul[id=navi] a {
     list-style-type: none;
     padding: 0;
     display: none; 
-    background-color: rgb(189, 147, 10);
+    background-color: #fff;
 }
 #navi>li>ul a{
     font-size: 13px;
-    color: rgba(0, 0, 0);
+    color: darkgray;
 }
 #navi>li>a:hover+ul {
     display: block;
+    z-index: 3;
 }
 #navi>li>ul:hover {
     display: block;
@@ -109,6 +114,7 @@ ul[id=navi] a {
 #search-form>div {
     float: right;
 }
+
 
 #content {
     width: 100%;
@@ -167,16 +173,14 @@ ul[id=navi] a {
     text-align: center;
     font-family: 'Nanum Myeongjo', serif;
 }
-
-#with_item~div {
-    height: 50px;
-    display: inline-block;
-    text-align: center;
+#with_item~input {
+    display: none;
 }
-#with_item~div a {
+#with_item~label {
+    /* height: 50px; */
     width: 142px;
     display: inline-block;
-    text-decoration: none;
+    text-align: center;
     color: #858585;
     border: 1px gray solid;
     background-color: #fff;
@@ -189,7 +193,7 @@ ul[id=navi] a {
     width: 100%;
     height: 311px;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 #item_foto img {
     padding-top: 10px;
@@ -199,7 +203,6 @@ ul[id=navi] a {
     margin: 0;
     padding: 0;
     /* white-space: nowrap; */
-    /* overflow: hidden; */
 }
 #slide>li {
     display: inline-block;
@@ -208,20 +211,19 @@ ul[id=navi] a {
     position: absolute;
     left: 1248px;
 }
-
-#m_1:hover~#item_foto>#slide>#s_1 {
+#slide1:checked~#item_foto>#slide>#s_1 {
     left: 0px;
 }
-#m_2:hover~#item_foto>#slide>#s_2 {
+#slide2:checked~#item_foto>#slide>#s_2 {
     left: 0px;
 }
-#m_3:hover~#item_foto>#slide>#s_3 {
+#slide3:checked~#item_foto>#slide>#s_3 {
     left: 0px;
 }
-#m_4:hover~#item_foto>#slide>#s_4 {
+#slide4:checked~#item_foto>#slide>#s_4 {
     left: 0px;
 }
-#m_5:hover~#item_foto>#slide>#s_5 {
+#slide5:checked~#item_foto>#slide>#s_5 {
     left: 0px;
 }
 
