@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>책 카테고리 선택</title>
+    <style>
+        fieldset{
+            width: 700px;
+        }
+        #inner {
+            width: 90%;
+            text-align: right;
+        }
+        #result {
+            width: 700px;
+            height: 200px;
+            border: 1px solid red;
+        }
+        #all:checked~input {
+            checked;
+        }
+    </style>
+</head>
+<body>
+    <h1>Practice1</h1>
+    
+    <fieldset>
+        <legend>취미</legend>
+        <div id="inner">
+            <input type="checkbox" name="all" id="all" value="전체선택" onclick="selectAll();">
+            <label for="all">전체선택</label>
+            <input type="checkbox" name="hobby" id="contain" value="종합">
+            <label for="contain">종합</label>
+            <input type="checkbox" name="hobby" id="novel" value="소설">
+            <label for="novel">소설</label>
+            <input type="checkbox" name="hobby" id="poem" value="시/에세이">
+            <label for="poem">시/에세이</label>
+            <input type="checkbox" name="hobby" id="econ" value="경제/경영" >
+            <label for="econ">경제/경영</label>
+            <input type="checkbox" name="hobby" id="self" value="자기계발">
+            <label for="self">자기계발</label>
+            <input type="checkbox" name="hobby" id="kind" value="아동">
+            <label for="kind">아동</label> <br>
+            <input type="checkbox" name="hobby" id="reise" value="여행">
+            <label for="reis">여행</label>
+            <input type="checkbox" name="hobby" id="science" value="과학">
+            <label for="science">과학</label>
+            <input type="checkbox" name="hobby" id="history" value="역사/문화">
+            <label for="history">역사/문화</label>
+            <input type="checkbox" name="hobby" id="fremd" value="외국어">
+            <label for="fremd">외국어 &nbsp;&nbsp;&nbsp;</label>
+            <input type="checkbox" name="hobby" id="computer" value="컴퓨터">
+            <label for="computer">컴퓨터&nbsp;&nbsp;&nbsp;</label>
+            <input type="checkbox" name="hobby" id="comic" value="만화">
+            <label for="comic">만화</label>
+        </div>
+        </fieldset>
+        <br>
+
+        <button onclick="category();">카테고리 선택</button>
+        <div id="result"></div>
+        <script>
+            function category() {
+                let result = document.getElementById("result");
+                let hobby = document.querySelectorAll("input[name=hobby]:checked");
+                let all = document.getElementById("all");
+
+                for(let h of hobby){
+                    result.innerHTML += h.value+"&nbsp;";
+                }
+            }
+            function selectAll(){
+                let hobby = document.getElementsByName("hobby");
+                let hobby_c = document.querySelectorAll("input[name=hobby]:checked");
+                let all = document.getElementById("all");
+
+                if(all.checked==true){
+                    for(let n=0; n<hobby.length; n++){
+                        hobby[n].checked == true;
+                    }
+                }else {
+                    
+                }
+            }
+        </script>
+</body>
+</html>
