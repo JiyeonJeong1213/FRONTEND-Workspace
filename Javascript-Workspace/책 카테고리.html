@@ -7,19 +7,16 @@
     <title>책 카테고리 선택</title>
     <style>
         fieldset{
-            width: 700px;
+            width: 100%;
         }
         #inner {
             width: 90%;
             text-align: right;
         }
         #result {
-            width: 700px;
-            height: 200px;
+            width: 100%;
+            height: 300px;
             border: 1px solid red;
-        }
-        #all:checked~input {
-            checked;
         }
     </style>
 </head>
@@ -63,25 +60,48 @@
         <div id="result"></div>
         <script>
             function category() {
+                // 내가 선택한(checked) 체크박스의 value값들을 아이디값이 result인 div요소의 
+                // 안쪽(innerHTML)에 출력
                 let result = document.getElementById("result");
                 let hobby = document.querySelectorAll("input[name=hobby]:checked");
-                let all = document.getElementById("all");
 
-                for(let h of hobby){
-                    result.innerHTML += h.value+"&nbsp;";
-                }
+                // for(let h of hobby){
+                //     result.innerHTML += h.value+"&nbsp;";
+                // }
+
+                hobby.forEach(function(item, index, array){
+                    result.innerHTML += item.value+" ";
+                })
             }
+
             function selectAll(){
                 let hobby = document.getElementsByName("hobby");
-                let hobby_c = document.querySelectorAll("input[name=hobby]:checked");
-                let all = document.getElementById("all");
+                let checked = document.getElementById("all").checked; // true oder false
 
-                if(all.checked==true){
-                    for(let n=0; n<hobby.length; n++){
-                        hobby[n].checked == true;
+                for(let i = 0; i<hobby.length; i++){
+                    hobby[i].checked = checked;
+                }
+                // if(checked){
+                //     for(let i=0; i<hobby.length; i++){
+                //         hobby[i].checked = true;
+                //     }
+                // }else {
+                //     for(let i=0; i<hobby.length; i++){
+                //         hobby[i].checked = false;
+                //     }
+                // }
+            }
+
+            let hobbys = document.getElementsByName("hobby");
+            for(let i=0; i<hobbys.length; i++){
+                hobbys[i].onclick = function() {
+                    let hobbyLength = document.querySelectorAll("input[name=hobby]:checked").length;
+                    // 선택된 체크박스의 길이 == 전체 체크박스의 길이
+                    if(hobbyLength == hobbys.length) {
+                        document.getElementById("all").checked = true;
+                    }else {
+                        document.getElementById("all").checked = false;
                     }
-                }else {
-                    
                 }
             }
         </script>
