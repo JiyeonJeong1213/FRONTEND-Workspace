@@ -95,7 +95,7 @@
 
             // 배열 선언과 동시에 초기화
             let arr4 = new Array("홍길동", "임꺽정");
-            let arr5 = ["자바", "오라클", "스프링"]; // 자주 사용됨
+            let arr5 = ["자바", "오라클", "스프링"]; // 가장 자주 사용됨
 
             console.log(arr4);
             console.log(arr5);
@@ -418,7 +418,8 @@
 
             let findItem;
 
-            // 내가 원하는 요소를 찾으면 true값을 반환 후 반복 종료(찾는 값이 없다면 undefined 반환)
+            // 내가 원하는 요소를 찾으면 true값을 반환시킨 후 item값을 최종적으로 반환 후  
+            // 반복 종료(찾는 값이 없다면 undefined 반환)
             findItem = a.find(function(item, index, array){
                 console.log(item, index, array);
                 if(item.id == "정지연2"){
