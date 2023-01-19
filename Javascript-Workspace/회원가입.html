@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <fieldset>
+        <legend>회원가입</legend>
+        <label for="id">아이디 : </label>
+        <input type="text" id="id"> <span id="span_id"></span>
+        <br><br>
+        <label for="pwd">비밀번호 : </label>
+        <input type="password" id="pwd">
+        <br><br>
+        <label for="check">비밀번호 확인 : </label>
+        <input type="password" id="check"> <span id="span_pwd"></span>
+        <br><br>
+        <label for="name">이름 : </label>
+        <input type="text" id="name">
+        <br><br>
+        <button type="button" id="btn">회원가입</button>
+    </fieldset>
+
+    <script>
+        let Id = document.getElementById("id");
+        let check = document.getElementById("check");
+        let btn = document.getElementById("btn");
+
+        id.addEventListener("keyup", checkId);
+        function checkId() {
+            let id = document.getElementById("id").value;
+            let span_id = document.getElementById("span_id");
+            if(id === 'user01'){
+                span_id.innerHTML = "이미 존재하는 아이디입니다.";
+                span_id.style.color = "red";
+            }else{
+                span_id.innerHTML = "사용 가능한 아이디입니다.";
+                span_id.style.color = "green";
+            }
+        }
+        
+        
+        check.addEventListener("blur", checkPwd);
+        function checkPwd() {
+            let pwd = document.getElementById("pwd").value;
+            let check = document.getElementById("check").value;
+            let span_pwd = document.getElementById("span_pwd");
+            if(pwd === check){
+                span_pwd.innerHTML = "비밀번호가 일치합니다."
+                span_pwd.style.color = "green";
+            }else {
+                span_pwd.innerHTML = "비밀번호가 일치하지 않습니다."
+                span_pwd.style.color = "red";
+            }
+        }
+
+        btn.addEventListener("click", validation);
+        function validation() {
+            // 1. 입력하지 않은 값이 있는지 체크
+            let inputs = document.getElementsByTagName("input");
+            let inputNames = ["아이디", "비밀번호", "비밀번호 확인", "이름"]
+            for(let i = 0; i<inputs.length; i++){
+                if(inputs[i].value.length == 0) {
+                    alert(inputNames[i]+"를 입력해주세요.");
+                    inputs[i].focus();
+                    return;
+                }
+            }
+            // 2. 사용할 수 있는 아이디인지 체크
+
+            // 3. 비밀번호가 일치하는지 체크
+        }
+    </script>
+</body>
+</html>
