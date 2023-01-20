@@ -56,7 +56,8 @@
         }
     </script>
 
-    <h3>* 표준 이벤트 모델(addEventListener)</h3>
+    <h3>* 표준 이벤트 모델(addEventListener)</h3> 
+    <!-- 자주 사용됨 -->
 
     <!-- 요소 내부에 직접적인 이벤트 속성 기술 x -->
     <button id="btn3">표준이벤트</button>
@@ -121,7 +122,7 @@
             // console.log(e.target); // 호출시 매개변수를 넣어주지 않았기 때문에 에러 발생
             console.log(this); // window객체를 가르킴
             /*
-                위의 두 방식은 해당 요소객체(버튼).이벤트호출 이기 때문ㄴ에
+                위의 두 방식은 해당 요소객체(버튼).이벤트호출 이기 때문에
                 this로 버튼을 불러올 수 있지만,
                 일반 선언적 함수를 호출하는 인라인 이벤트 모델 방식일 경우 window.event.target만 가능
             */

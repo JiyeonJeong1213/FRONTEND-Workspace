@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구매정보</title>
+</head>
+<style>
+    #result {
+        border: 1px solid black;
+        width: 500px;
+        height: 200px;
+    }
+</style>
+<body>
+    <fieldset>
+        <legend>구매 정보</legend>
+        <ul>
+            <li>구매자 : <input id="buyer" type="text" placeholder="구매자의 이름을 입력하세요."></li>
+            <li>상품명 : <input id="p_name" type="text" placeholder="구매 상품명을 입력하세요."></li>
+            <li>가격 : <input id="p_price" type="text" placeholder="구매 가격을 입력하세요."></li>
+            <li>구매 수량 : <input id="p_number" type="number" min="10" max="100" step="10" placeholder="최소 10."></li>
+            <li>납품 등급 : <input id="p_grade" type="range" min="1" max="9" step="2"></li>
+            <li>기타 사항 : <textarea id="etc" name="etc" cols="30" rows="10"></textarea></li>
+        </ul>
+    </fieldset>
+    <br>
+    <button id="btn">입력 값 출력하기</button>
+    <br>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", print)
+        function print() {
+            let result = document.getElementById("result");
+            let buyer = document.getElementById("buyer").value;
+            let p_name = document.getElementById("p_name").value;
+            let p_price = document.getElementById("p_price").value;
+            let p_number = document.getElementById("p_number").value;
+            let p_grade = document.getElementById("p_grade").value;
+            let etc = document.getElementById("etc").value;
+
+            result.innerHTML += "구매자명 : "+buyer+"님 <br>";
+            result.innerHTML += "상품명 : "+p_name+"<br>";
+            result.innerHTML += "가격 : "+p_price+"만원 <br>";
+            result.innerHTML += "구매 수량 : "+p_number+"개 <br>";
+            result.innerHTML += "납품등급 : "+p_grade+"등급 <br>";
+            result.innerHTML += "기타사항 : "+etc+"<br>";
+        }
+    </script>
+</body>
+</html>
