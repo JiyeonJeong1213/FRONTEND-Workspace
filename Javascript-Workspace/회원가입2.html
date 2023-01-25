@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        label {
+            font-size: 10px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    * 아이디 : <input type="text" name="userId" id="userId"> <br>
+    <label>첫글자는 반드시 영문자로, 그리고 영문자, 숫자를 포함하여 총 4~12자로 입력하시오.</label> 
+    <br><br>
+    * 비밀번호 : <input type="password" name="pwd" id="userPwd"> <br>
+    <label>영문자, 숫자, 특수문자(!@#$%^)로 총 8~15자로 입력하시오.</label> 
+    <br><br>
+    * 비민번호 확인 : <input type="password" name="pwd" id="checkPwd"> <br>
+    <label>위의 비밀번호와 일치하게 입력하시오.</label> 
+    <br><br>
+    * 이름 : <input type="text" name="userName" id="userName"> <br>
+    <label>한글로만 이루어져야 하며 2글자 이상으로 입력하시오.</label> 
+    <br><br>
+    * 이메일 : <input type="text" name="email" id="email"> <br>
+    <label>이메일 양식에 맞춰서 입력하시오.</label> 
+    <br><br>
+    * 취미 : <input type="text" name="hobby" id="hobby" placeholder="축구, 농구, 야구, 독서 등"> 
+    <br><br>
+    * 거주지 : 
+    <select name="place" id="place">
+        <option value="seoul">서울</option>
+        <option value="Busan">부산</option>
+        <option value="Daegu">대구</option>
+    </select>
+    <br><br>
+    <button onclick="register();">회원가입</button>
+    <button type="reset">취소</button>
+
+    <script>
+        function register() {
+            let userId = document.getElementById("userId").value;
+            let userPwd = document.getElementById("userPwd").value;
+            let checkPwd = document.getElementById("checkPwd").value;
+            let userName = document.getElementById("userName").value;
+
+            // 빈칸 체크
+            let inputs = document.getElementsByTagName("input");
+            let inputNames = ["아이디", "비밀번호", "비밀번호 확인", "이름", "이메일", "취미", "거주지"]
+            for(let i=0;i<inputs.length;i++) {
+                if(inputs[i].value.length==0) {
+                    alert(inputNames[i]+"를 입력하세요.");
+                    inputs[i].focus();
+                    return;
+                }
+            }
+
+            // 아이디 체크
+            let regExp = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
+            if(!regExp.test(userId)){
+                alert("아이디를 다시 입력하세요.");
+                document.getElementById("userId").focus();
+                return;
+            }
+
+            // 비밀번호 체크
+            let regExp2 = /^[a-zA-Z0-9!@#$%^]{8,15}$/;
+            if(!regExp2.test(userPwd)){
+                alert("비밀번호를 다시 입력하세요.");
+                document.getElementById("userPwd").focus();
+            }
+
+            // 비밀번호확인 체크
+            if(userPwd != checkPwd){
+                alert("비밀번호가 일치하지 않습니다.");
+                document.getElementById("checkPwd").focus();
+            }
+
+            // 이름 체크
+            let regExp3 = /^[ㄱ-ㅎㅏ-ㅣ가-힣]{2,}$/;
+            if(!regExp3.test(userName)){
+                alert("이름을 다시 입력하세요.");
+                document.getElementById("userName").focus();
+            }
+        }
+    </script>
+
+
+</body>
+</html>
