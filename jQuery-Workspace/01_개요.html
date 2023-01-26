@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개요</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+    <script src="resources/js/jquery-3.6.3.js"></script>
+    <!-- 오프라인 방식 -->
+</head>
+<body>
+    <script>
+        // 자바스크립트 언어
+
+        window.onload = function() {
+            console.log("문서읽기완료");
+        }
+        window.onload = function() {
+            console.log("문서읽기완료2");
+        } // 고전이벤트방식이라 하나밖에 적용 안됨.
+
+        // 방식 1)
+        jQuery(document).ready(function(){
+            console.log("문서 읽어들이기 완료1");
+        });
+        // 방식 2)
+        $(document).ready(function(){
+            console.log("문서 읽어들이기 완료2");
+        });
+        // 방식 3) 제일 간편해서 자주 쓰임
+        $(function(){
+            console.log("문서 읽어들이기 완료3");
+
+            // h3요소를 선택해서 배경색 노란색으로 변경
+            // -- 순수 자바스크립트 방식
+            let h3arr = document.getElementsByTagName("h3"); // [h3, h3, ...]
+            for(let h3 of h3arr) {
+                h3.style.backgroundColor="yellow";
+            }
+
+            // -- jQuery 방식
+            // h3요소를 선택해서 배경색 핑크색으로 변경
+            $("h3").css("background","pink");
+            // $("선택자") : 해당 요소를 선택
+            // .css() : 선택된 요소들의 스타일과 관련된 기능 수행
+
+            $("pre").css("color","red");
+        });
+        //$("pre").css("color","red"); // 아직 만들어진 pre태그가 없어서 실행 안됨 => 레디펑션 안쪽으로 넣어주면 됨
+        
+        /*
+            만약에 콘솔에 $ is not defined라고 나오면 jQuery연동을 안 한 것.
+            head태그에 script태그로 연동해 주었는지 확인해보기
+        */
+    </script>
+
+    <h1>jQuery 개요</h1>
+
+    <h3>* jQuery란?</h3>
+    <p>
+        기존에 자바스크립트 언어만으로 구현하기에 <br>
+        복잡했던 구문 작성을 간소화하기 위해 "존레식"에 의해 개발된 <br>
+        JavaScript기반 라이브러리 <br>
+        즉, JavaScript 언어로 유용한 함수나, 내용들이 이미 만들어져있는 모음집이라고 생각하면 된다. <br><br>
+
+        복잡한 자바스크립트 구문을 보다 짧고 쉽게 개발 가능 <br>
+        (적은 양의 코드로 빠르고, 풍부한 기능 제공) <br><br>
+
+        - jQuery 장점 <br>
+        1) DOM요소와 관련된 스크립트를 보다 쉽게 구현할 수 있다. <br>
+        2) AJAX(비기동식 통신), 이벤트 처리 등 폭 넓게 지원한다. <br>
+        3) jQuery와 관련된 확장형 플러그인, 오픈 API등을 지원한다. <br>
+            (차트, 슬라이드, 애니메이션 등등) <br>
+    </p>
+
+    <hr>
+
+    <h3>* jQuery 라이브러리 연결 방법</h3>
+    <p>
+        head태그 내부에 script태그로 jQuery관련 js파일 가져오기 <br>
+        오프라인/ 온라인방식이 있음 <br>
+        - jQuery 공식 사이트 : <a href="https://jquery.com" target="_blank">공식사이트</a> <br><br>
+
+        1. CDN(content Delivery Network)을 통한 연결(온라인 방식) <br>
+            - 라이브러리를 제공하는 사이트 url을 제시해서 파일 경로로 지정 <br>
+
+        2. jQuery 라이브러리 직접 다운로드 받은 후 경로 지정(오프라인방식) <br>
+            - .js파일을 내가 직접 다운로드 받아 저장한 후 해당 저장된 파일 경로를 작성하는 방법 <br>
+            <!-- 
+                (Uncompressed : 개발 전용)
+                일반 JS파일 : 개발자가 보기 쉽도록 주석, 코드정렬 등을 활용해서 가시성을 유지하는 파일
+
+                (Compressed : 배포 전용)
+                min JS파일 : 주석, 들여쓰기, 띄어쓰기 등을 최소화해서 파일의 용량을 줄여서 제공하는 파일
+            -->
+    </p>
+
+    <hr>
+
+    <h3>* jQuery 구문 작성하기</h3>
+    <p>
+        <b>
+            jQuery구문으로 DOM요소를 다루는 구문을 기본적으로 작성할 것이기 때문에 <br>
+            jQuery명령은 문서(Document)상의 요소들이 전부 다 로딩(만들어진 후)된 후 실행되어야 함
+        </b>
+    </p>
+    <br><br>
+
+    - 순수 자바스크립트에서의 해당 내용은
+    <pre>
+        window.onload = function() {
+            실행내용;
+        }
+
+        onload함수 : 페이지가 로딩되면 자동으로 실행되는 함수
+        단, JavaScript에서의 window.onload구문은 해당 문서의 요소들도 다 로딩되고 난 후 
+        연동되어있는 외부 문서들도 다 가지고 온 뒤에 실행됨. 
+        그리고, window.onload는 해당 문서에서 한번만 작성 가능
+    </pre>
+
+    - jQuery에서의 해당 내용은 3가지 구문으로 제공
+    <pre>
+        1) jQuery(document).ready(function() {
+            실행내용;
+        });
+
+        2) $(document).ready(function() {
+            실행내용;
+        });
+
+        $ === jQuery 키워드를 의미
+
+        3) $(function(){
+            실행내용;
+        });
+
+        jQuery에서의 해당 function은 DOM요소들만 다 로딩되면 바로 실행된다. 
+        + 여러번 기술이 가능하며 제한이 없음.
+    </pre>
+
+
+
+</body>
+</html>
