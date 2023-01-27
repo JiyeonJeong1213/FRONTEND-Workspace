@@ -44,7 +44,7 @@
         <button type="button">검색</button>
     </div>
 
-    <script>
+    <!-- <script>
         let searchs = document.getElementsByName("search"); 
         let divs = document.getElementsByTagName("div");
 
@@ -64,21 +64,27 @@
                 }
             })
         });
-    </script>
+    </script> -->
     
-    <!-- <script>
+    <script>
+        let searchs = document.getElementsByName("search"); 
+        searchs.forEach(function(item,index){
+            item.addEventListener("click", search)});
+
         function search() {
             let tresult = document.getElementById("t-result");
             let dresult = document.getElementById("d-result");
             let nresult = document.getElementById("n-result");
-            let search = document.querySelector("input[type='radio']:checked").value;
+            let search = document.querySelector("input[name='search']:checked").value;
 
-            switch(search){
-                case "title" : tresult.style.display="block"; break;
-                case "date" : dresult.style.display="block"; break;
-                case "name" : nresult.style.display="block"; break;
-            };
+            if(search == "title"){
+                tresult.style.display="block";
+            }else if(search == "date"){
+                dresult.style.display="block";
+            }else {
+                nresult.style.display="block";
+            }
         }
-    </script> -->
+    </script>
 </body>
 </html>

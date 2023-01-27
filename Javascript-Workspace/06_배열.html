@@ -379,8 +379,12 @@
             a.forEach(function(item, index, array){
                 console.log(`${item}은 ${array}배열의 ${index}에 위치해 있습니다.`);
             })
+            
             // forEach구문 안에 실행시킬 함수를 추가하기
             a.forEach(testAlert);
+            function testAlert(text) {
+                alert(text);
+            }
 
             a.forEach(function(text){
                 alert(text);
@@ -394,9 +398,7 @@
             */
         }
 
-        function testAlert(text) {
-            alert(text);
-        }
+        
     </script>
 
     <hr>
