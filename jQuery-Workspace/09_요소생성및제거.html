@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 생성 및 제거</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <style>
+        .added{
+            color: palegreen;
+        }
+        .item{
+            background-color: yellowgreen;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin: 5px;
+        }
+        .item span{
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+        .lime {
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <h1>요소 생성 및 제거</h1>
+
+    <h3>* 동적으로 요소 생성</h3>
+
+    <button id="btn">요소 생성</button>
+    <div id="area1"></div>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                // p태그 동적으로 생성
+                // 1. 문자열로 만드는 방법
+                let el1 = "<p>Create Element By Text</p>";
+                
+                // 2. DOM메소드로 만드는 방법(createElement, createTextNode)
+                // (js방식)
+                let el2 = document.createElement("p"); // <p></p>
+                let text = document.createTextNode("create Element By DOM");
+                el2.appendChild(text); // <p>Create Element By DOM</p>
+
+                // 3. jQuery방식을 이용해서 만드는 방법
+                let el3 = $("<p></p>").text("Create Element By jQuery");
+
+                $("#area1").append(el1, el2, el3); // area1요소에 el1~3까지 삽입
+            });
+        });
+    </script>
+
+    <hr>
+
+    <h3>* 삽입관련 메소드 part1</h3>
+    <p>
+        선택된 요소를 기준으로 새로이 생성된 요소를 추가하는 메소드 <br>
+
+        - $(A).append(B) : A요소 내부에 가장 뒤에 B를 추가(자손/하위) <br>
+        - $(A).prepend(B) : A요소 내부에 가장 앞에 B를 추가(자손/하위) <br>
+        - $(A).before(B) : A요소의 앞에 B를 추가(동위) <br>
+        - $(A).after(B) : A요소 뒤에 B를 추가(동위)
+    </p>
+
+    <h3>* 삽입 관련 메소드 part2</h3>
+    <p>
+        - $(B).appendTo(A) : B를 A요소 내에 뒷부분에 추가(자손/하위) <br>
+        - $(B).prependTo(A) : B를 A요소 내에 앞부분에 추가(자손/하위) <br>
+        - $(B).insertBefore(A) : B를 A요소 앞에 추가(동위) <br>
+        - $(B).insertAfter(A) : B를 A요소 뒤에 추가(동위) <br>
+    </p>
+
+    <h1 id="test1"><span>A</span></h1>
+    <h1 id="test2"><span>A</span></h1>
+    <h1 id="test3"><span>A</span></h1>
+    <h1 id="test4"><span>A</span></h1>
+    <script>
+        $(function(){
+            // part1
+            // $("#test1").append("<span class='added'>B</span>");
+            // $("#test2").prepend("<span class='added'>B</span>");
+            // $("#test3").before("<span class='added'>B</span>");
+            // $("#test4").after("<span class='added'>B</span>");
+
+            // part2
+            $("<span class='added'>B</span>").appendTo("#test1");
+            $("<span class='added'>B</span>").prependTo("#test2");
+            $("<span class='added'>B</span>").insertBefore("#test3");
+            $("<span class='added'>B</span>").insertAfter("#test4");
+        });
+    </script>
+</body>
+</html>

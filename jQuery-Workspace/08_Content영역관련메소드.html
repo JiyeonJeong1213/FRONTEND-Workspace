@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content영역 관련 메소드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Content영역(innerHTML, innerText)관련 메소드</h1>
+
+    <h3>* html("문구") 메소드 : innerHTML속성과 관련된 메소드</h3>
+    <p>
+        선택된 요소의 content영역(시작과 종료태그 사이)을 리턴해주거나 변경해주는 메소드 <br>
+        - $("선택자").html() : 선택된 요소의 content영역의 값을 반환 <br>
+        - $("선택자").html("문구") : 선택된 요소의 content영역의 값을 문구로 변경해줌 <br>
+        전달하는 문구에 html태그가 있을 경우 태그로서 해석이 됨
+    </p>
+
+    <h1 id="test1">
+        <a>네이버로</a>
+    </h1>
+    <h1 id="test2">
+
+    </h1>
+    <script>
+        $(function(){
+            // 자바스크립트 방식
+            // let tmp = document.getElementById("test1").innerHTML;
+
+            // JQ 방식
+            let tmp = $("#test1").html();
+            $("#test2").html(tmp);
+            $("#test2").children("a").attr("href","https://www.naver.com");
+        });
+    </script>
+
+    <br><br>
+
+    <div class="class1">test1</div>
+    <div class="class1">test1</div>
+    <div class="class1">test1</div>
+    <script>
+        $(function(){
+            // $(".class1").html("<h1>aaa</h1>");
+
+            /*
+                각기 다른 내용으로 div의 컨텐츠요소를 꾸며주고 싶을 때
+
+                선택된 요소들에 순차적으로 접근할 때마다 실행할 함수(콜백함수)를 만들기
+
+                이 때, 꾸며줄 값을 함수의 리턴값으로 제시해주면 됨
+
+                콜백함수 : 함수 실행 후 반환된 결과값을 가지고 반영
+            */
+            // [div, div, div]
+            // let count = 0;
+            // $(".class1").html(function(){
+            //     return "<h1>aaa"+ count++ +"</h1>";
+            // });
+
+            $(".class1") // [div,div,div]
+            .html(function(index,html){ // 첫번째 div요소를 가져와서 html메소드를 실행시키는데 매개변수로 익명함수 전달
+                // html메소드 내부에서 전달받은 함수를 호출
+                return "<h1>인덱스 : "+index+", content내용 : "+html+"</h1>"
+            });
+            /*
+                해당 콜백함수가 호출될 때마다 첫번째 인자값으로는 순차적으로 접근하는 요소의 인덱스 수 전달
+                두번째 인자값으로는 접근하는 요소의 컨텐츠영역값(innerHTML속성값)을 전달
+            */
+        });
+    </script>
+
+    <hr>
+
+    <h3>* text("문구") 메소드 : innerText속성과 관련된 메소드</h3>
+    <p>
+        선택된 요소의 content영역의 텍스트만 리턴해주거나 변경해주는 메소드 <br>
+        - $("선택자").text() : 선택된 요소의 content영역을 반환(단, html태그는 무시되고 텍스트만 전달됨) <br>
+        - $("선택자").text("문구") : 선택된 요소의 content영역을 전달값으로 변경 <br>
+    </p>
+
+    <h1 id="test3">
+        <a>구글로</a>
+    </h1>
+    <h1 id="test4">
+
+    </h1>
+    <script>
+        $(function(){
+            let tmp = $("#test3").text();
+            console.log(tmp);
+            $("#test4").text(tmp);
+        });
+    </script>
+
+    <br><br>
+
+    <div class="class2">test2</div>
+    <div class="class2">test2</div>
+    <div class="class2">test2</div>
+    <script>
+        $(function(){
+            $(".class2").text(function(index, text){
+                return "<hr> 인덱스 : "+index+", 내용 : "+text+"</h1>"
+            });
+        });
+    </script>
+</body>
+</html>

@@ -19,18 +19,33 @@
         <ul>
             <li>구매자 : <input id="buyer" type="text" placeholder="구매자의 이름을 입력하세요."></li>
             <li>상품명 : <input id="p_name" type="text" placeholder="구매 상품명을 입력하세요."></li>
-            <li>가격 : <input id="p_price" type="text" placeholder="구매 가격을 입력하세요."></li>
+            <li>가격 : <input id="p_price" type="number" placeholder="구매 가격을 입력하세요."></li>
             <li>구매 수량 : <input id="p_number" type="number" min="10" max="100" step="10" placeholder="최소 10."></li>
-            <li>납품 등급 : <input id="p_grade" type="range" min="1" max="9" step="2"></li>
+            <li>납품 등급 : <input id="p_grade" type="range" value="0" min="1" max="9" step="2"></li>
             <li>기타 사항 : <textarea id="etc" name="etc" cols="30" rows="10"></textarea></li>
         </ul>
     </fieldset>
     <br>
     <button id="btn">입력 값 출력하기</button>
-    <br>
+    <br><br>
     <div id="result"></div>
 
     <script>
+        document.getElementById("btn").addEventListener("click", print)
+        function print() {
+            let inputs = document.getElementsByTagName("input");
+            let result = document.getElementById("result");
+
+            result.innerHTML += "구매자명 : "+inputs[0].value+"님 <br>"
+                            +"상품명 : "+inputs[1].value+"<br>"
+                            +"가격 : "+inputs[2].value+"만원 <br>"
+                            +"구매 수량 : "+inputs[3].value+"개 <br>"
+                            +"납품등급 : "+inputs[4].value+"등급 <br>"
+                            +"기타사항 : "+document.getElementById("etc").value;
+        }
+    </script>
+    
+    <!-- <script>
         document.getElementById("btn").addEventListener("click", print)
         function print() {
             let result = document.getElementById("result");
@@ -48,6 +63,6 @@
             result.innerHTML += "납품등급 : "+p_grade+"등급 <br>";
             result.innerHTML += "기타사항 : "+etc+"<br>";
         }
-    </script>
+    </script> -->
 </body>
 </html>
