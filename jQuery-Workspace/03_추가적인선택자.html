@@ -73,6 +73,13 @@
             // $("input[type^=ra").attr("checked", true);
             // $("input[type$=box]").attr("checked",true);
             // // .attr() : 그 외의 속성들과 관련된 기능을 수행
+            /*
+                attr()함수는 html속성 중 img태그의 src, table태그의 rowspan, colspan, a태그의 href,
+                인라인 style속성의 값을 변경해줄 때 사용하는 걸 권장함.
+                (반드시 명시적으로 속성명, 속성값을  작성해줘야 하는 요소에 한해서)
+
+                그 외에는 prop()함수 사용(checked, selected, disabled, enabled 등)
+            */
             // $("input[class*=st2]").css("width","100px").css("height","100px").val("butt");
         });
     </script>
@@ -181,6 +188,7 @@
             });
         });
     </script>
+    <!-- prop는 js속성(console.dir()로 확인 가능), attr은 html속성(명시적) -->
 
     <h4>- selected 상태선택자(select>option)</h4>
     <p>
@@ -210,7 +218,7 @@
         // 라벨 안 쪽에 자동으로 한국, 미국, 선택안함, 영국 값들이 바뀌도록 이벤트 부여
         $(function(){
             $("select").change(function(){
-                $("#result").html($("option:selected").html());
+                $("#result").html($("option:selected").val());
             });
         });
     </script>
