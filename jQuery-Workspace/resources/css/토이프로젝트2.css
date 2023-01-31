@@ -1,0 +1,142 @@
+body{
+    margin: 0;
+}
+div {
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
+#wrap {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+/* ---헤더부분--- */
+#header {
+    position: fixed;
+    width: 100%;
+    
+}
+#header_inner {
+    height: 71px;
+    width: 1250px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: flex;
+}
+/* 로고 */
+#h_logo {
+    margin-left: 90px;
+    width: 46px;
+    position: relative;
+}
+#logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background-color: rgb(255, 153, 0);
+}
+/* 메뉴바 */
+#h_menu {
+    margin-left: 20px;
+    width: 745px;
+}
+#h_menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#h_menu a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+#menu {
+    display: flex;
+    justify-content: space-between;
+}
+#menu>li {
+    line-height: 70px;
+    font-size: 14px;
+}
+#menu>li>ul {
+    display: none;
+    font-size: 13px;
+    background-color: white;
+}
+#menu>li:hover ul {
+    display: block;
+}
+#menu>li>ul:hover {
+    display: block;
+}
+#menu>li>ul a{
+    padding: 10px;
+}
+/* 아이콘 */
+#h_right {
+    width: 319px;
+}
+#h_right>div {
+    float: right;
+}
+#right_text {
+    line-height: 70px;
+}
+#right_icon {
+    line-height: 77px;
+}
+#h_right a {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}
+#h_right span {
+    color: gray;
+}
+
+
+/* 컨텐츠부분 */
+#contents { 
+    margin-top: 71px;
+    height: auto;
+}
+#imgslide {
+    height: 700px;
+}
+#content_2 {
+    height: 834px;
+    width: 1250px;
+    padding: 100px 15px;
+    margin: 0 auto;
+}
+#content_3 {
+    height: 709px;
+}
+#content_4 {
+    height: 1046px;
+    width: 1250px;
+    padding: 100px 15px;
+    margin: 0 auto;
+}
+
+/* 푸터부분 */
+#footer {
+    height: 364px;
+    width: 1250px;
+    padding: 30px 15px;
+    margin: 0 auto;
+    background-color: rgb(70, 67, 67);
+}
+#f_icon {
+    text-align: center;
+}
+#f_icon>a {
+    margin: 10px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시각적인 효과</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <h1>시각적인 효과 메소드(Effect메소드)</h1>
+    <p>
+        페이지 내에 애니메이션 효과를 만들기 위해 사용되는 메소드 집합 
+    </p>
+
+    <h3>* show(), hide(), toggle()</h3>
+    <p>
+        선택된 요소가 점점 커지면서 보여지고, 점점 작아지면서 사라지게 하는 메소드
+    </p>
+
+    <button id="hide">숨기기</button>
+    <button id="show">보이기</button>
+    <button id="toggle">토글</button>
+    
+    <br>
+    <img src="../resources/image/bono.jpg" id="bono">
+
+    <div id="area" style="width: 100px; height: 100px; background-color: pink;"></div>
+    
+    <script>
+        $(function(){
+            // show, hide의 시간(밀리세컨즈 단위)를 정해주면 그 시간에 걸쳐서 나타나거나 사라짐
+            $("#hide").click(function(){
+                $("#bono").hide(3000);
+                $("#area").hide(1000);
+            });
+
+            $("#show").click(function(){
+                $("#bono").show(3000);
+                $("#area").show();
+
+            $("#toggle").click(function(){ // 없어졌다가 나타나는 기능
+                $("#bono").toggle(1000);
+                $("#area").toggle(1000);
+            });
+
+            });
+        });
+    </script>
+
+    <!-- opacity속성 : 투명도 관련 속성(0~1) -->
+    <div style="width: 100px; height: 100px; background-color: tomato; opacity: 0.5;"></div>
+
+    <h3>* fadeIn(), fadeOut(), fadeToggle()</h3>
+    <p>
+        선택된 요소가 점점 투명해지면서 사라지고 점점 선명해지면서 보여주게 하는 메소드
+    </p>
+
+    <button id="fadeOut">숨기기</button>
+    <button id="fadeIn">보여주기</button>
+    <button id="fadeToggle">토글</button>
+    <br>
+    <img src="../resources/image/peng.jpg" id="peng">
+    <script>
+        $(function(){
+            // show, hide에 매개변수로(밀리세컨즈단위)를 정해준 것과 같이 서서히 나타났다 사라지게 할 수 있음
+            $("#fadeOut").click(function(){
+                $("#peng").fadeOut(2000);
+            });
+
+            $("#fadeIn").click(function(){
+                $("#peng").fadeIn(2000);
+            });
+
+            $("#fadeToggle").click(function(){
+                $("#peng").fadeToggle(2000);
+            });
+        });
+    </script>
+</body>
+</html>
