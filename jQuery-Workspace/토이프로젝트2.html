@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>더플라스틱</title>
     <link rel="stylesheet" href="./resources/css/토이프로젝트2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./resources/js/토이프로젝트.js"></script>
 </head>
 <body>
     <div id="wrap">
@@ -16,27 +18,96 @@
                 </div>
                 <div id="h_menu">
                     <ul id="menu">
-                        <li>HOME</li>
-                        <li>ABOUT</li>
-                        <li>MEMBERSHIP</li>
-                        <li>CLASS</li>
-                        <li>SCHEDULE</li>
-                        <li>STORE</li>
-                        <li>NOTICE</li>
-                        <li>LET'S TALK</li>
+                        <li>
+                            <a href="">HOME</a>
+                        </li>
+                        <li>
+                            <a href="">ABOUT</a>
+                            <ul>
+                                <li><a href="">클라이밍이란?</a></li>
+                                <li><a href="">더플라스틱</a></li>
+                                <li><a href="">지점소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">MEMBERSHIP</a>
+                            <ul>
+                                <li><a href="">회원권</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">CLASS</a>
+                            <ul>
+                                <li><a href="">처음 오시는 분</a></li>
+                                <li><a href="">일일체험</a></li>
+                                <li><a href="">스타터패키지</a></li>
+                                <li><a href="">테크닉반</a></li>
+                                <li><a href="">걸프렌즈</a></li>
+                                <li><a href="">1:1개인강습</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">SCHEDULE</a>
+                            <ul>
+                                <li><a href="">개강일정</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">STORE</a>
+                            <ul>
+                                <li><a href="">the plastic store</a></li>
+                                <li><a href="">equipment</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">NOTICE</a>
+                            <ul>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">이벤트</a></li>
+                                <li><a href="">자주 묻는 질문</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">LET'S TALK</a>
+                        </li>
                     </ul>
                 </div>
                 <div id="h_right">
-
+                    <div id="right_icon">
+                        <a href=""><img src="./resources/img/shopping.png" width="22px"></a>
+                        <a href=""><img src="./resources/img/magnifier.png" width="22px"></a>
+                    </div>
+                    <div id="right_text">
+                        <a href="">Login</a>
+                        <a href="">Register</a> 
+                        <span>|</span>
+                    </div>
+                    
+                    
+                    
                 </div>
             </div>
         </div>
         <div id="contents">
             <div id="imgslide">
-
+                <ul id="slides">
+                    <li><img src="./resources/img/slide1.jpg" width="1903px" height="700px"></li>
+                    <li><img src="./resources/img/slide2.jpg" width="1903px" height="700px"></li>
+                    <li><img src="./resources/img/slide3.jpg" width="1903px" height="700px"></li>
+                </ul>
+                <div id="bullets">
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                </div>
+                <div id="controller">
+                    <!-- &lang: 왼쪽 방향 화살표 &rang: 오른쪽 방향 화살표 --> 
+                    <span class="prev">&lang;</span> 
+                    <span class="next">&rang;</span>
+                </div>
             </div>
             <div id="content_2">
-
+            
             </div>
             <div id="content_3">
 
@@ -46,7 +117,51 @@
             </div>
         </div>
         <div id="footer">
-
+            <div id="f_icon">
+                <a href=""><img src="./resources/img/insta.png" width="25px"></a>
+                <a href=""><img src="./resources/img/location.png" width="27px"></a>
+            </div>
+            <div id="f_menu">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">MEMBERSHIP</a></li>
+                    <li><a href="">CLASS</a></li>
+                    <li><a href="">SCHEDULE</a></li>
+                    <li><a href="">STORE</a></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">LET'S TALK</a></li>
+                </ul>
+            </div>
+            <div id="f_content">
+                <p>더플라스틱 클라이밍/ 김덕화</p>
+                <p>사업자등록번호 : 102-16-70180 ㅣ 통신판매업 신고번호 :2023-서울강서-0281호</p>
+                <p>27, Gonghang-daero 81-gil, Gangseo-gu, Seoul, Republic of Korea </p>
+                <p> +82 (0)2-6084-8890 ㅣ theplastik2@naver.com</p>
+            </div>
+            <div id="f_navi">
+                <ul>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">사업자정보확인</a></li>
+                </ul>
+            </div>
+            <div id="copyright">
+                <p>
+                    Copyright ⓒ 2023 더플라스틱 THE PLASTIK CLIMBING GYM All rights reserved.
+                </p>
+            </div>
+            <div id="google">
+                <a href="" id="g_btn">
+                    <div id="btn_img">  
+                        <img src="./resources/img/google_play_logo.png" width="25px">
+                    </div>
+                    <div id="btn_txt">
+                        <p id="txt1">Android app on</p>
+                        <p id="txt2">GOOLE PLAY</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </body>
