@@ -47,16 +47,11 @@ $(function(){
     $("#h_right a").hover(function(){$(this).css("color","gray")},function(){$(this).css("color","black")});
 
     // ---컨텐츠부분---
+
     // 이미지슬라이드
     let imgs = $("#slides");
     let img_count = $("#slides").children().length;
-    let img_position = 1;
-
-    // 1번 이미지를 복사에서 마지막 슬라이드 뒤에 붙이고, 마지막 이미지를 복사해서 처음 슬라이드 앞에 붙임
-        let clone_first = imgs.children().eq(0).clone(true);
-        let clone_last = imgs.children().eq(2).clone(true);
-        imgs.append(clone_first);
-        // imgs.prepend(clone_last);    
+    let img_index = 1;
 
     $(".prev").click(function(){
         back();
@@ -65,39 +60,97 @@ $(function(){
         next();
     });
 
-    function back() {
-        if(1<img_position){
-            imgs.animate({
-                left: "+=1903px"}, 500
-            );
-        img_position--;
+    /* 슬라이드마다 불렛 컬러 바꿔주기 */
+    function b_color() {
+        $("#bullets>div").css("background","rgba(255, 255, 255, 0.5)");
+        switch(img_index){
+            case 1: $("#bullets>div").eq(0).css("background","white"); break;
+            case 2: $("#bullets>div").eq(1).css("background","white"); break;
+            case 3: $("#bullets>div").eq(2).css("background","white"); break;
         }
-        // if(1===img_position) {
-        //     setTimeout(function(){
-        //         imgs.animate({
-        //             left: "-=5709px"
-        //         },0)
-        //     },500);
-        //     img_position = 1;
-        // }
+    }
 
+    /* <화살표 클릭하면 이전 슬라이드로 이동 */
+    function back() { 
+        imgs.css("transition",'0.5s ease-out')
+        imgs.animate({
+            left: "+=1903px"}, 500
+        );
+        img_index--;
+
+        if(0===img_index) {
+            setTimeout(function(){
+                imgs.css("transition",'0s ease-out')
+                imgs.animate({
+                    left: "-=5709px"
+                },0)
+            },1000);
+            img_index = 3;
+        }
+
+        b_color();
     }    
 
+    /* >화살표 클릭하면 다음 슬라이드로 이동 */
     function next() {
-        if(img_count>img_position) {
-            imgs.animate({
-                left: "-=1903px"}, 500
-            );
-        img_position++;
+        imgs.css("transition",'0.5s ease-out')
+        imgs.animate({
+            left: "-=1903px"}, 500
+        );
+        img_index++;
+        
+        if(img_index===img_count-1) {
+            setTimeout(function(){
+                //0.5초동안 복사한 첫번째 이미지에서, 진짜 첫번째 위치로 이동
+                imgs.css("transition",'0s ease-out')
+                imgs.animate({
+                    left: "+=5709px"
+                },0);
+            },1000);
+            img_index = 1;
         }
-        // if(img_position===img_count) {
-        //     setTimeout(function(){
-        //         //0.5초동안 복사한 첫번째 이미지에서, 진짜 첫번째 위치로 이동
-        //         imgs.animate({
-        //             left: "+=5709px"
-        //         },0);
-        //     },500);
-        //     img_position = 3;
-        // }
+        
+        b_color();
+    }
+
+    /* 불렛 클릭하면 슬라이드 이동 */
+    let bullets = $("#bullets>div");
+    $.each (bullets, function(index){
+        $(this).click(function(){
+            imgs.css("left", -1903*(index+1)+"px")
+            img_index=index+1;
+            b_color();
+        });
+    });
+
+    /* 자동 슬라이드 */
+    setInterval(next,3000);
+
+    // content2
+    /* 마우스 올리면 글씨 보이게 */
+    let content_2_imgs = $("#content_2 img");
+    let hover_texts = $(".hover-text");
+
+    content_2_imgs.each(function(index){
+        $(this).hover(function(){
+            $(hover_texts[index]).css("display","block");
+        },function(){
+            $(hover_texts[index]).css("display","none");
+        });
+    });
+    hover_texts.each(function(){
+        $(this).hover(function(){
+            $(this).css("display","block");
+        },function(){
+            $(this).css("display","none");
+        });
+    });
+
+    // content3
+    /* 더보기 클릭하면 펼쳐지게 */ 
+    $("#more").click(more);
+
+    function more() {
+        $("#insta_inner").css("height","1232px");
     }
 });
