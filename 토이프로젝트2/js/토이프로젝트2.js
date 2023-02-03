@@ -6,9 +6,9 @@ $(function(){
     },function(){
         $(this).children('a').css("color","black");
     });
-    $("#menu>li").eq(0).click(function(){
-        location.reload();
-    });
+    // $("#menu>li").eq(0).click(function(){
+    //     location.reload();
+    // });
     $("#menu>li").eq(1).hover(function(){
         $(this).children('a').text("클라이밍");
     },function(){
