@@ -13,6 +13,9 @@
             animation-direction: alternate;
             animation-iteration-count: infinite;
         }
+        #check2:checked+div {
+            animation: ani2 5s infinite alternate;
+        }
         @keyframes ani {
             from {
                 background-color: green;
@@ -43,9 +46,6 @@
                 transform: rotate(45deg);
                 border: 3px solid orange;
             }
-        }
-        #check2:checked+div {
-            animation: ani2 5s infinite alternate;
         }
     </style>
 </head>

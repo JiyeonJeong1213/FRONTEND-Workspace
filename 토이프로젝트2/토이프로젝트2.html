@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더플라스틱</title>
+    <link rel="stylesheet" href="./css/토이프로젝트2.css">
+    <link rel="stylesheet" href="./css/토이프로젝트2_font.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="./js/토이프로젝트.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="header_inner">
+                <div id="h_logo">
+                    <div id="logo"></div>
+                </div>
+                <div id="h_menu">
+                    <ul id="menu">
+                        <li>
+                            <a href="">HOME</a>
+                        </li>
+                        <li>
+                            <a href="">ABOUT</a>
+                            <ul>
+                                <li><a href="">클라이밍이란?</a></li>
+                                <li><a href="./About1.html">더플라스틱</a></li>
+                                <li><a href="">지점소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">MEMBERSHIP</a>
+                            <ul>
+                                <li><a href="">회원권</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">CLASS</a>
+                            <ul>
+                                <li><a href="">처음 오시는 분</a></li>
+                                <li><a href="">일일체험</a></li>
+                                <li><a href="">스타터패키지</a></li>
+                                <li><a href="">테크닉반</a></li>
+                                <li><a href="">걸프렌즈</a></li>
+                                <li><a href="">1:1개인강습</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">SCHEDULE</a>
+                            <ul>
+                                <li><a href="">개강일정</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">STORE</a>
+                            <ul>
+                                <li><a href="">the plastic store</a></li>
+                                <li><a href="">equipment</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">NOTICE</a>
+                            <ul>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">이벤트</a></li>
+                                <li><a href="">자주 묻는 질문</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">LET'S TALK</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="h_right">
+                    <div id="right_icon">
+                        <span class="hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                            </svg>
+                        </span>
+                        <span class="hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </span>
+                    </div>
+                    <div id="right_text">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModa2">Register</button>
+                        <span>|</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
+        
+        <div class="modal-dialog" role="document" style="width: 370px;"> 
+
+            <div class="modal-content" style="display: inline-block;
+            margin: 80px auto;">
+                <div class="modal-header" style="border-bottom: 0;">
+                    <h2 class="modal-title" id="exampleModalLabel">로그인</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <article class="">
+                        <form action="" method="post" target="hidden_frame">
+                            <input type="hidden" name="back_url" value="Lw%3D%3D" >
+                            <input type="hidden" name="back_url_auth" value="">
+                            <input type="hidden" name="used_login_btn" value="Y">
+                            <div class="input_block">
+                                <div> 
+                                    <input title="이메일" type="text" name="uid" value="" placeholder="이메일" class="input-1">
+                                </div>
+                                <div> 
+                                    <input title="비밀번호" name="passwd" type="password" value="" placeholder="비밀번호" autocomplete="off" class="input-1">
+                                </div>
+                            </div> 
+                            <div class="cheak_article">
+                                <div class="checkbox checkbox-styled">
+                                    <label class="form-label">
+                                        <input type="checkbox" class="ie" name="auto_login" data-type="use" value="ok" checked="checked">
+                                        <span class="agree_tit">로그인상태유지</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <p class="back-color2">
+                                <button class="btn btn-primary1" style="font-size: 14px; color:white; ">로그인</button>
+                            </p>
+                        </form>
+                        <div style="margin-top: 10px !important;">
+                            <a href="" onclick="" style="text-decoration: none; color: #000;">회원가입</a>      
+                            <a href="" onclick="" style="float: right; text-decoration: none; color: #000;">아이디 · 비밀번호 찾기</a> 
+                        </div>
+                        <div class="divider t-center">
+                            <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
+                        </div>
+                        <div>
+                            <p><a class="btn btn-primary1 btn-naver " href="">네이버로 시작하기</a></p>
+                            <p><a class="btn btn-primary1 btn-kakao" id="custom-login-btn" href="">카카오로 시작하기</a></p>
+                        </div>
+                        <div class="divider t-center">
+                            <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
+                        </div>
+                        <p style="background-color: rgb(131, 147, 167);"><a class="btn btn-primary1" style="font-size: 14px; color:white;" href="" onclick="">비회원 주문예약 조회</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <!-- Modal2 -->
+    <div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document" style="width: 370px;"> 
+            <div class="modal-content" style="display: inline-block;
+            margin: 80px auto;">
+                <div class="modal-header" style="border-bottom: 0;">
+                    <h2 class="modal-title modal-t" id="exampleModalLabel">회원가입</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                            <p style="border: 0.5px solid #e5e7eb;">
+                                <button class="btn btn-primary1" style="font-size: 14px;">ID/PW 회원가입</button>
+                            </p>
+                        
+                    
+                        
+                        <div class="divider t-center">
+                            <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
+                        </div>
+
+                        <div>
+                            <p><a class="btn btn-primary1 btn-naver " href="">네이버로 시작하기</a></p>
+                            <p><a class="btn btn-primary1 btn-kakao" id="custom-login-btn" href="">카카오로 시작하기</a></p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <div id="contents">
+            <div id="imgslide">
+                <ul id="slides">
+                    <li><img src="https://cdn.imweb.me/thumbnail/20211221/aa8d7a5275ae8.jpg" width="1903px" height="700px"></li>
+                    <li><img src="https://cdn.imweb.me/thumbnail/20220702/7bf19d7d5e2da.jpg" width="1903px" height="700px"></li>
+                    <li><img src="https://cdn.imweb.me/thumbnail/20221005/c6597726b24a6.jpg" width="1903px" height="700px"></li>
+                    <li><img src="https://cdn.imweb.me/thumbnail/20211221/aa8d7a5275ae8.jpg" width="1903px" height="700px"></li>
+                    <li><img src="https://cdn.imweb.me/thumbnail/20220702/7bf19d7d5e2da.jpg" width="1903px" height="700px"></li>
+                </ul>
+                <div id="bullets">
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                </div>
+                <div id="controller">
+                    <!-- &lang: 왼쪽 방향 화살표 &rang: 오른쪽 방향 화살표 --> 
+                    <span class="prev">&lang;</span> 
+                    <span class="next">&rang;</span>
+                </div>
+            </div>
+            <div id="content_2">
+                <div id="box1">
+                    <a href=""><img src="https://cdn.imweb.me/thumbnail/20211202/9cd8590e29daa.jpg" width="100%" height="300px"></a>
+                    <a href="">
+                        <div class="hover-text">
+                            <span>처음이신 분</span>
+                        </div>
+                    </a>
+                    <h5><b>STARTER</b></h5>
+                    <div class="holder" style="width: 80%;">
+                        <hr class="hr-color" style="border-top-width: 4px">
+                    </div> <br>
+                    <p>클라이밍이 처음인가요?</p>
+                    <p>더플라스틱에서 새롭게 도전해보세요!</p>
+                    <p><br></p>
+                    <p>처음하는 분들을 위해 클라이밍에 대한 기본 설명부터</p>
+                    <p>장비대여까지 모두 한번에 준비했어요!</p>
+                </div>
+                <div id="box2">
+                    <a href=""><img src="https://cdn.imweb.me/thumbnail/20211202/552b343445572.jpg" width="100%" height="300px"></a>
+                    <a href="">
+                        <div class="hover-text">
+                            <span>회원수업</span>
+                        </div>
+                    </a>    
+                    <h5><b>CLASS</b></h5>
+                    <div class="holder" style="width: 80%;">
+                        <hr class="hr-color" style="border-top-width: 4px">
+                    </div> <br>
+                    <p>더플라스틱만의 차별화된 커리큘럼으로</p>
+                    <p>기초부터 중급기술까지 다양하게!</p>
+                    <p><br></p>
+                    <p>많-은 수업 중  나에게 딱 맞는 수업은 무엇일까요?</p>
+                </div>
+                <div id="box3">
+                    <a href=""><img src="https://cdn.imweb.me/thumbnail/20220702/91a1fd48fc791.jpg" width="100%" height="300px"></a>
+                    <a href="">
+                        <div class="hover-text">
+                            <span>스토어</span>
+                        </div>
+                    </a>
+                    <h5><b>STORE</b></h5>
+                    <div class="holder" style="width: 80%;">
+                        <hr class="hr-color" style="border-top-width: 4px">
+                    </div> <br>
+                    <p>시즌별 새로운 티셔츠와</p>
+                    <p>운동복과 일상의 경계를 없애는 새로운 스타일의 몽떼팬츠</p>
+                    <p><br></p>
+                    <p>장비부터 의류까지</p>
+                    <p>더플라스틱 스토어에서 만나보세요!</p>
+                </div>
+            </div>
+            <div id="content_3">
+
+            </div>
+            <div id="content_4">
+                <div id="insta">Instagram</div>
+                <div id="insta_inner">
+                    <div class="insta_rows">
+                        <a href="https://www.instagram.com/reel/CoEnjkYIf0O/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/328069607_463805679300096_3088935138580942902_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=47ctiQ805fkAX8ECtZ3&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCyujXNCmfOKHXbDo2YoAYtzPB7SFIyKdZBy_fFp7B9Wg&oe=63E0CBF4');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/Cn8cBBbSVT2/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/327818677_1333616123847501_3307425521759582081_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=cRKdjNekx2MAX_e-gfU&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBbYgzMsxWaPM8Q3FX5HFEwXxtYAPt0tOxP-MnaamcwhQ&oe=63E002BD');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/CnqQqFJywY5/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/326502888_151746377661443_4378824755318868503_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=u1OAcmjRmsEAX-DeExM&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCLWWyGclVR6BCdRBNtqN_o2U3IoiIDTN_FoJvj3Pd4FA&oe=63E02A20');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/CnoaFfsyghS/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/326208595_123854350369990_877316055259380131_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=iLbGCkb7KmMAX9STDcE&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCVvrHBQ0lcOSJFlEG9hwNmdXhUl6uTbMeFiONOMGQsWA&oe=63E0ED35');"><div class="hover"></div></div></a>
+                    </div>
+                    <div class="insta_rows">
+                        <a href="https://www.instagram.com/p/CnoYdBiytf5/" target="_blank"><div style="background-image: url('https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/326255693_101513146164223_8304665148856404637_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=oFnuLSqgZmsAX8KJoRj&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDRYpfbjoPwJc8McJmeRtxQrs7ED2dZUdSSCNa5EQgi1A&oe=63E08DB8');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/CnmB4zzJ6yp/" target="_blank"><div style="background-image: url('https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/325973552_862319278318958_3862455896638135497_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=KplXtyOi-r4AX8oN3s9&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAWr9XWvTI2-B186hSzSti7sk-S-JHz5uf7pYeZ9XUf0w&oe=63DFE284');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/Cnl-zcPSqil/" target="_blank"><div style="background-image: url('https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/325661066_845760643185202_565982766837514708_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=RGAc_gJbcAcAX-BA0mA&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfD1TDFx0-YSERyY6doDGQV38keOPiHq7Ty6w4RC1ayNWw&oe=63DFC61B');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/Cnl7p1vStHl/" target="_blank"><div style="background-image: url('https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/326092076_1326958281458596_767929800680204508_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=WAWMR-dotrAAX_tTE_I&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAmRh8ouDcmRnaDrSBPfARh0JHe_iss6-TshA1_wI9MUg&oe=63DF68DF');"><div class="hover"></div></div></a>
+                    </div>
+                    <div class="insta_rows">
+                        <a href="https://www.instagram.com/p/Cnl7p1vStHl/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/326241669_885899992631021_4482723258333299720_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=-n1HieyRQ-8AX_dEh6n&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDad0YI3q1h16wRU5-lgpAdMw0kCsksnlojNNg_Rr00vw&oe=63E0C800');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/Cnjvzz7rs-g/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/325663363_1347411769407697_7635988953965187273_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=227DnW-vn78AX9C9xH4&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfD-nD_rZAw6pW9bSbodQ3NskYqKBtOHqcxsa70_kRCSjQ&oe=63E0DEB0');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/Cnjb_cwJGUm/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/325618598_1641070489664451_8428562760287644181_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=5TaAnuMUUq4AX_jQJYn&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfA41vjjPmLgJQ4Yl2mqZQCH7_dOyrRanOZ7T-Gz1YwXsA&oe=63E0F8D3');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/reel/CnieP2DqTC_/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/326249749_509841364364711_1758206552197531463_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=KyFA8cUGMU4AX8SQyW_&_nc_oc=AQlytGvn2Cd45iBqUsNjSAFevd3Mnu00umrIoHNBNSnCGQXRG57ItLlUqv0NsHYdip0&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfD85si4A_p102rUOb92sgWBlr2A8n5Wi4ql3-tTfwIKPg&oe=63DFFBAC');"><div class="hover"></div></div></a>
+                    </div>
+                    <div class="insta_rows">
+                        <a href="https://www.instagram.com/reel/Cng_KShqF8G/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/325783952_576253347265307_166690057820765451_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=enZ_G-nRFlAAX_C9irh&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCg7QoqP7mqrDqPVrcWFE0sXGtvS8bNLNEgLTPgCc3DgQ&oe=63E09DB6');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/Cngnih7yrd9/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/324871810_6012422115488584_3614234666322652014_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=S-s8enQyEYMAX_4xSML&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfBiu881qcE18HEj4zoWGADv_baB7LGW7i-9GVXC21PstQ&oe=63DFDD23');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/CnYKUTGSSqT/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/325215889_554298623262572_2799752806361601764_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=r-PRV2ebODUAX9kdWEH&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfATefvZvRQl1kch4tQFhqx6AErTmeMCudytnWW6erKdaw&oe=63DF7C24');"><div class="hover"></div></div></a>
+                        <a href="https://www.instagram.com/p/CnT73U_pMzN/" target="_blank"><div style="background-image: url('https://scontent-itm1-1.cdninstagram.com/v/t51.29350-15/324868191_155722557232787_8411525086321670185_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=1S4_v2Vu-r8AX9v3YbN&_nc_ht=scontent-itm1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDPaa-vjLoCU95Pdt8tQWmr8pYWOkba0s14c_9Rd7MBBw&oe=63E05415');"><div class="hover"></div></div></a>
+                    </div>
+                </div>
+                <div id="more">
+                    <button type="button">더보기</button>
+                </div>
+                <div id="blank"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="f_icon">
+                <a href="https://instagram.com/jiyeonu.u?igshid=ZDdkNTZiNTM=" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg></a>
+                <a href="https://map.naver.com/v5/entry/place/1503413539?placePath=%2Fhome" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+                </a>
+            </div>
+            <div id="f_menu">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">MEMBERSHIP</a></li>
+                    <li><a href="">CLASS</a></li>
+                    <li><a href="">SCHEDULE</a></li>
+                    <li><a href="">STORE</a></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">LET'S TALK</a></li>
+                </ul>
+            </div>
+            <div id="f_content">
+                <p>더플라스틱 클라이밍/ 김덕화</p>
+                <p>사업자등록번호 : 102-16-70180 ㅣ 통신판매업 신고번호 :2023-서울강서-0281호</p>
+                <p>27, Gonghang-daero 81-gil, Gangseo-gu, Seoul, Republic of Korea </p>
+                <p> +82 (0)2-6084-8890 ㅣ theplastik2@naver.com</p>
+            </div>
+            <div id="f_navi">
+                <ul>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">사업자정보확인</a></li>
+                </ul>
+            </div>
+            <div id="copyright">
+                <p>
+                    Copyright ⓒ 2023 더플라스틱 THE PLASTIK CLIMBING GYM All rights reserved.
+                </p>
+            </div>
+            <div id="google">
+                <a href="" class="g_btn">
+                    <div id="btn_img">  
+                        <img src="https://www.theplastik.co.kr/common/img/google_play_logo.png" width="25px">
+                    </div>
+                    <div id="btn_txt">
+                        <p id="txt1">Android app on</p>
+                        <p id="txt2">GOOLE PLAY</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- 톡상담상자 -->
+        <a class="katalk_fix" href="https://accounts.kakao.com/login/?continue=http%3A%2F%2Fpf.kakao.com%2F_kmxfCb%2Fchat%3Fapi_ver%3D1.1%26kakao_agent%3Dsdk%252F1.43.1%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fwww.theplastik.co.kr%26app_key%3D64b9177d37c136abfaf1b400f72d0516%26referer%3Dhttps%253A%252F%252Fwww.theplastik.co.kr%252Fonedayclass" target="_blank">
+            <img src="https://developers.kakao.com/assets/img/about/logos/channel/consult_small_yellow_pc.png">
+        </a>
+    </div>
+    <div id="hidden">
+        <div id="hidden_inner">
+            <input type="text" placeholder="검색">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </span>
+        </div>
+        <div id="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,7 +1,8 @@
 body{
     margin: 0;
+    position: relative;
 }
-div {
+div a {
     /* border: 1px solid lightgray; */
     box-sizing: border-box;
 }
@@ -99,9 +100,9 @@ div {
     line-height: 70px;
 }
 #right_icon {
-    line-height: 77px;
+    line-height: 67px;
 }
-#h_right a {
+#h_right span.hidden {
     margin: 5px;
     text-decoration: none;
     color: black;
@@ -109,9 +110,95 @@ div {
 #h_right span {
     color: gray;
 }
+/* 모달 아이콘 */
+#h_right button {
+    background: white;
+    border: none;
+    color: black;
+    margin: 0;
+    padding: 5px;
+    font-size: 13px;
+}
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25) !important; 
+}
+
+ /* ---모달 css--- */
+#cocoaModal>p{
+    margin: 0 !important;
+}
+.modal-t{
+    font-size: 24px;
+    text-align: center;
+    margin: 0;
+}
+.input-1{
+    border: none;
+    padding: 12px 16px;
+    width: 100%;
+    line-height: 1.2;
+    border: 0.5px solid #e5e7eb;
+}
+.checkbox{
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.btn-primary1{
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+
+}
+.btn-kakao {
+    background-color: #FFEB00 !important;
+    background-image: url(https://vendor-cdn.imweb.me/images/kakao_icon.png);
+    background-size: 20px;
+    background-position: 12px 49%;
+    background-repeat: no-repeat;
+    color: #3c1e1e !important;
+    border-color: #FFEB00 !important;
+    font-size: 14px !important;;
+}
+.btn.btn-naver {
+    background-color: #27d34a !important;
+    border-color: #27d34a !important;
+    background-image: url(https://vendor-cdn.imweb.me/images/naver_login2x.png);
+    background-size: 16px;
+    background-position: 15px 50%;
+    background-repeat: no-repeat;
+    color: #fff !important;
+    font-size: 14px;
+}
+.border{
+    background: #e7eaee;
+    background-image: initial;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: rgb(231, 234, 238);
+    height: 1px;
+    position: absolute;
+    left: 0;
+    width: 40%;
+    top: 50%;
+}
+.divider{
+    position: relative;
+    margin: 25px 0;
+}
+.t-center{
+    text-align: center;
+    margin-bottom: 0;
+}
 
 
-/* 컨텐츠부분 */
+/* ---컨텐츠부분--- */
 #contents { 
     margin-top: 71px;
     height: auto;
@@ -136,7 +223,7 @@ div {
     padding: 0 15px;
     margin: 0 auto;
 }
-/* ---슬라이드--- */
+/* 슬라이드 */
 #imgslide {
     height: 700px;
     width: 1903px;
@@ -231,13 +318,43 @@ div {
     font-size: 14px;
     margin: 0;
 }
+
+/* 두둥 효과 */
+@keyframes trScreen{
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3,0.3,0.3);
+    }
+    20% {
+        
+    }
+    40%{
+        transform: scale3d(0.9,0.9.0.9);
+    }
+    60% {
+        transform: scale3d(1.03,1.03,1.03);
+    }
+    80% {
+        transform: scale3d(0.97,0.97,0.97);
+    }
+    100% {
+        opacity: 1;
+        transform: scale3d(1,1,1);
+    }
+}
+.text-m1{
+    animation: trScreen 0.7s;
+    animation-delay: 0s;
+}
+
 /* 컨텐츠3 */
 #content_3 {
-    background-image: url('../img/content_3.jpg');
+    background-image: url('https://cdn.imweb.me/thumbnail/20211115/5e468c0be80ff.jpg');
     background-position: 50% 50%;
     background-size: cover;
     background-attachment: fixed;
 }
+
 /* 컨텐츠4 */
 #insta {
     font-size: 3em;
@@ -267,16 +384,31 @@ div {
     border-radius: 20px;
     cursor: pointer;
 }
+#more>button:focus {
+    outline: none;
+}
 .insta_rows {
     display: flex;
+}
+.insta_rows a {
+    width: 307.5px;
+    height: 308px;
+    padding: 5px;
+}
+.hover {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+}
+.insta_rows a:hover>div>div {
+    visibility: visible;
 }
 .insta_rows div {
     background-size: cover;
     background-position: 50% 50%;
-    width: 307.5px;
-    height: 308px;
-    padding: 5px;
-    background-clip: content-box;
+    width: 100%;
+    height: 100%;
 }
 #blank {
     height: 90px;
@@ -286,18 +418,22 @@ div {
 /* ---푸터부분--- */
 #footer {
     height: 364px;
-    width: 1250px;
+    width: 100%;
     padding: 30px 15px;
     margin: 0 auto;
-    background-color: rgb(70, 67, 67);
+    background-color: rgba(56,56,56,1);
     text-align: center;
 }
 #footer>div {
     text-align: center;
 }
 /* 푸터아이콘 */
+#f_icon {
+    margin-bottom: 5px;
+}
 #f_icon>a {
     margin: 10px;
+    color: white;
 }
 /* 푸터메뉴 */
 #f_menu>ul {
@@ -349,18 +485,21 @@ div {
     display: inline-block;
     margin-top: 10px;
 }
-#g_btn {
+.g_btn {
     display: flex;
     justify-content: center;
     border: 1px solid black;
     background-color: black;
     padding: 10px 20px;
-    border-radius: 20%;
+    border-radius: 30px;
 }
-#g_btn>div {
+.g_btn>div {
     padding: 5px;
 }
-#g_btn p {
+#btn_img {
+    line-height: 33px;
+}
+.g_btn p {
     text-decoration: none;
     color: white;
     margin: 0;
@@ -371,4 +510,68 @@ div {
 #txt2 {
     font-size: 15px;
     font-weight: bold;
+}
+.g_btn:hover{
+    text-decoration: none;
+}
+
+/* ---톡상담상자--- */
+.katalk_fix{
+    position: fixed;
+    top: 93%;
+    left: 93%;
+}
+
+/* ---히든서치창--- */
+#hidden {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+#hidden_inner {
+    position: fixed;
+    left: 50%;
+    transform: translateX( -50% );
+    top: 20%;
+    margin: auto;
+}
+#hidden span {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+#hidden span:hover {
+    cursor: pointer;
+}
+#hidden input {
+    background-color: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid white;
+    padding: 15px 35px 15px 0;
+    box-sizing: border-box;
+    width: 740px;
+    height: 65px;
+    font-size: 25px;
+    color: white;
+}
+#hidden input:focus {
+    outline: none;
+}
+#close {
+    width: auto;
+    height: auto;
+    padding: 30px;
+    position: fixed;
+    right: 0;
+    color: white;
+}
+#close>svg {
+    cursor: pointer;
 }

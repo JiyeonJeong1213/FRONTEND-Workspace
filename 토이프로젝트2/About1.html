@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더 플라스틱</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <link href="font.css" rel="stylesheet" type="text/css"/>
+    <script src="about1.js"></script> 
+     
+     <!-- Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+     <!-- Popper JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+     <!-- Latest compiled JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ 
+
+</head>
+<body>
+    <header>
+        <div id="header">
+            <div id="header_inner">
+                <div id="h_logo">
+                    <div id="logo"></div>
+                </div>
+                <div id="h_menu">
+                    <ul id="menu">
+                        <li>
+                            <a href="">HOME</a>
+                        </li>
+                        <li>
+                            <a href="">ABOUT</a>
+                            <ul>
+                                <li><a href="">클라이밍이란?</a></li>
+                                <li><a href="">더플라스틱</a></li>
+                                <li><a href="">지점소개</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">MEMBERSHIP</a>
+                            <ul>
+                                <li><a href="">회원권</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">CLASS</a>
+                            <ul>
+                                <li><a href="">처음 오시는 분</a></li>
+                                <li><a href="">일일체험</a></li>
+                                <li><a href="">스타터패키지</a></li>
+                                <li><a href="">테크닉반</a></li>
+                                <li><a href="">걸프렌즈</a></li>
+                                <li><a href="">1:1개인강습</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">SCHEDULE</a>
+                            <ul>
+                                <li><a href="">개강일정</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">STORE</a>
+                            <ul>
+                                <li><a href="">the plastic store</a></li>
+                                <li><a href="">equipment</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">NOTICE</a>
+                            <ul>
+                                <li><a href="">공지사항</a></li>
+                                <li><a href="">이벤트</a></li>
+                                <li><a href="">자주 묻는 질문</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">LET'S TALK</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="h_right">
+                    <div id="right_icon">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                            </svg>
+                        </a>
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div id="right_text">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModa2">Register</button>
+                        <span>|</span>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+  
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
+        
+        <div class="modal-dialog" role="document" style="width: 370px;"> 
+
+        <div class="modal-content" style="display: inline-block;
+        margin: 80px auto;">
+            <div class="modal-header" style="border-bottom: 0;">
+
+                
+            <h2 class="modal-title" id="exampleModalLabel">로그인</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            
+            </div>
+
+            <div class="modal-body">
+                <article class="">
+                
+                    <form action="" method="post" target="hidden_frame">
+                        <input type="hidden" name="back_url" value="Lw%3D%3D" >
+                        <input type="hidden" name="back_url_auth" value="">
+                        <input type="hidden" name="used_login_btn" value="Y">
+                
+                        <div class="input_block">
+                            <div> 
+                                <input title="이메일" type="text" name="uid" value="" placeholder="이메일" class="input-1">
+                            </div>
+                            <div> 
+                                <input title="비밀번호" name="passwd" type="password" value="" placeholder="비밀번호" autocomplete="off" class="input-1">
+                            </div>
+                        </div> 
+                
+                        <div class="cheak_article">
+                            <div class="checkbox checkbox-styled">
+                                <label class="form-label">
+                                    <input type="checkbox" class="ie" name="auto_login" data-type="use" value="ok" checked="checked">
+                                    <span class="agree_tit">로그인상태유지</span>
+                                </label>
+                            </div>
+                        </div>
+                
+                        <p class="back-color2">
+                            <button class="btn btn-primary1" style="font-size: 14px; color:white; ">로그인</button>
+                        </p>
+                    </form>
+                
+                    <div style="margin-top: 10px !important;">
+                        <a href="" onclick="" style="text-decoration: none; color: #000;">회원가입</a>		
+                        <a href="" onclick="" style="float: right; text-decoration: none; color: #000;">아이디 · 비밀번호 찾기</a> 
+                    </div>
+                
+                    
+                    <div class="divider t-center">
+                        <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
+                    </div>
+
+                
+
+                    <div>
+                        <p><a class="btn btn-primary1 btn-naver " href="">네이버로 시작하기</a></p>
+                        <p><a class="btn btn-primary1 btn-kakao" id="custom-login-btn" href="">카카오로 시작하기</a></p>
+                    </div>
+                
+                    <div class="divider t-center">
+                        <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
+                    </div>
+
+                    <p style="background-color: rgb(131, 147, 167);"><a class="btn btn-primary1" style="font-size: 14px; color:white;" href="" onclick="">비회원 주문예약 조회</a></p>
+                        
+                        
+                        
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+
+    
+    <!-- Modal2 -->
+    <div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
+        
+        <div class="modal-dialog" role="document" style="width: 370px;"> 
+
+        <div class="modal-content" style="display: inline-block;
+        margin: 80px auto;">
+            <div class="modal-header" style="border-bottom: 0;">
+
+                
+            <h2 class="modal-title modal-t" id="exampleModalLabel">회원가입</h2>
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+            <div class="modal-body">
+                
+                        <p style="border: 0.5px solid #e5e7eb;">
+                            <button class="btn btn-primary1" style="font-size: 14px;">ID/PW 회원가입</button>
+                        </p>
+                    
+                
+                    
+                    <div class="divider t-center">
+                        <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
+                    </div>
+
+                    <div>
+                        <p><a class="btn btn-primary1 btn-naver " href="">네이버로 시작하기</a></p>
+                        <p><a class="btn btn-primary1 btn-kakao" id="custom-login-btn" href="">카카오로 시작하기</a></p>
+                    </div>
+                
+                
+                        
+                        
+            </div>
+
+        </div>
+
+        </div>
+    </div>
+
+
+
+    </header>
+    <!--본문 구역 scetion 으로 구분-->
+
+    <!--첫번째 설명바-->
+    <div type="scetion" style="height: 824.01px;" class="back-color">
+        <main>
+            <div class="space30 inside" style="height: 90px;">
+
+            </div>
+            <div>
+                <b><p class="font-color1 font-s60 t-center maggin-tb15 animation text-m1">EASY! COMFY! FUN!</p></b>
+            </div>
+            <div>
+                <div class="holder" style="width: 50%;">
+                    <hr class="hr-color2" >
+                </div>
+             </div>
+             <div class="space30 inside" style="margin-top: 15px;"></div>
+            <div>
+                <div class="down_up">
+                    <p class="t-center font-s20 font-color2">더플라스틱은 더 많은 사람들이</p>
+                    <p class="t-center font-s20 font-color2">클라이밍을 접하고 즐길수 있는 경험을 제공합니다.</p>
+                    <p></p>
+                        <b><p class="t-center font-s20 font-color2 maggin-tb15 inside">'즐거운 취미, 편안한 공간, 재미있는 운동'</p></b>
+                    <p></p>
+                    <p class="t-center font-s20 font-color2">나이, 직업, 성별을 따지지 않고</p>
+                    <p class="t-center font-s20 font-color2">다양한 사람들이 함께 어우러질 수 있는 놀이</p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <b><p class="t-center font-s48 font-color2" style="padding: 85px 0 20px 0;">더플라스틱에서 시작해보세요!</p></b>
+                </div>
+            </div>
+        </main>    
+    </div>
+
+    <!--고정이미지 1-->
+    <div type="scetion" style="height: 817.99px;" class="section_wrap">
+
+        <div class="back-fixed"style="background-image:url('https://cdn.imweb.me/thumbnail/20210919/5c19dca4c5062.jpg'); background-position:50% 50%;  background-size:cover; background-repeat: no-repeat; position: absolute;left: 0;top: 0;right: 0; bottom: 0;">
+            <!--background-position:50% 50%;  background-size:cover; background-repeat: no-repeat; position: absolute;left: 0;top: 0;right: 0; bottom: 0;-->
+        </div>
+
+    </div>
+
+    <div type="scetion" style="height: 817.62px;">
+        <div id="text3">
+            <div class="space2 maggin-tb30"></div>
+            <div>
+                <p class="t-center font-s30" style="margin: 0;">우리는 궁금했습니다</p>
+                <p></p>
+                <b><p class="t-center font-s36">왜 클라이밍은 접하기 어려운 운동이라고 생각할까?</p></b>
+                <p></p>
+                <p></p>
+            </div>
+           
+            <div class="maggin-tb60" id="hoder1">
+                <div class="holder">
+                    <hr class="hr-color" >
+                </div>
+            </div>
+
+            <div class="space30 inside"></div>
+
+            <div class="">
+                <p></p>
+                <p class="t-center font-s20">'클라이밍은 재미없어'</p>
+                <p class="t-center font-s20">'클라이밍짐은 어둡고 답답해'</p>
+                <p class="t-center font-s20">'클라이밍은 어려워'</p>
+                <p class="t-center font-s20"></p>
+            </div>
+            <div class="t-center maggin-tb60 text-m1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-emoji-frown" viewBox="0 0 16 16" >
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+              </svg>
+            </div>
+
+        </div>
+    </div>
+
+    <div type="scetion" style="height: 785px;" class="section_wrap font-color3">;
+       <div style="background-image:url('https://cdn.imweb.me/thumbnail/20211011/aec0391a60774.jpg');  background-position:50% 50%;  background-size:cover; 
+       background-repeat: no-repeat; position: absolute;left: 0;top: 0;right: 0; bottom: 0;">
+
+       <div style="background-color:rgba(67, 33, 12, 0.8); height: 100%;">
+        <div>
+
+            <div style="height: 438px;"></div>
+         
+        </div>
+        
+        
+         <div class="inside maggin-tb15 op" id ="text1"> <!--up_down -->
+               
+            <b><p class="font-color4 font-s30 maggin-b0">클라이밍 시장이 좁은 데는 많은 이유가 있겠지만</p>
+            <p class="font-color4 font-s30">우리는 그 가장 큰 이유를 '접근성'이라고 생각했습니다</p> <br>
+            <p></p>
+            <p class="font-s20 maggin-b0">대부분의 클라이밍짐은 높고 층고가 필요하기 때문에</p>
+            <p class="font-s20 maggin-b0">어둡고 습한 지하나 건물의 가장 곡대기 층과 같이 잘보이지 않는 곳에 위치해 있습니다. </p><br>
+            <p></p>
+            <p class="font-s20"> 떄문에 관심을 갖고 찾아보지 않으면 접하기 어렵다는 큰 단점이 있었습니다. </p>
+            </b>
+        </div>
+
+        </div>
+
+         </div>
+    
+    </div>
+
+
+
+    <div type="scetion" style="height: 729.44px;">
+        <div style="height: 300px;"></div>
+        <div class="t-right inside font-s18 maggin-tb15 op" id="text2">
+            <b><p class="font-s36 maggin-b0">우리를 미치게 만들었던 이 운동을 </p></b>
+            <b><p class="font-s36">더 많은 사람이, 더 좋은 환경에서 할 수 있게 만들고 싶다.</p></b><br>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p class="font-color5 maggin-b0">만약 건물의 1층, 눈에 잘 띄는 곳에 암장이 있다면 어떨까? </p>
+            <p class="font-color5 maggin-b0">카페같이 환하고 예쁘게 꾸며놓는다면 사람들이 조금 더 접근하기 쉽지 않을까?</p>
+            <p class="font-color5 ">층고가 높은 1층 건물을 찾아 해매던 중 문래동을 알게 되었습니다. </p>
+            <p></p>
+            <p class="font-color5 maggin-b0">공장과 철공소가 즐비한 동네지만, 골목골목 예쁜 카페와 맛집이 숨어있는 동네</p>
+            <p class="font-color5">2-30대의 사람들이 맛집을 찾아 줄을 서는 동네.</p>
+            <p></p>
+        </div>
+
+    </div>
+
+    <div type="scetion" style="height: 1199.86px;" class="section_wrap font-color3 t-center">
+        <div class="back-fixed" style="background-image:url('https://cdn.imweb.me/thumbnail/20211011/e39a203d619fa.jpg'); background-position:50% 50%;  background-size:cover; background-repeat: no-repeat; position: absolute;left: 0;top: 0;right: 0; bottom: 0;">
+    
+            <div style="height:310px;" class="inside"></div>
+            <div class="font-s60" id="text4">
+               <b><p class="maggin-b0">ENJOY</maggin-b0></p> 
+                <p>THE PLASTIK</p>
+                </b>
+            </div>
+
+            <div class="inside " id="hoder2">
+                <div class="holder" style="width: 30%;">
+                    <hr class="hr-color" >
+                </div>
+            </div>
+
+            <div class="space30"></div>
+
+            <div style="height:575px;"></div>
+
+        </div>
+    </div>
+
+
+    <div type="scetion" style="height: 614.46px;">
+        <div style="height: 240px;"></div>
+        <div class="font-s30 t-center op" id="text5">
+            <p></p>
+            <p></p>
+            <p class="font-s22">그렇게 더플라스틱은 시작되었습니다. </p><br>
+            <p></p>
+            <p></p>
+            <p></p>
+            <b><p>‘클라이머만을’위한 암장이 아니라 모두가 편하게 올 수 있는 공간,</p>
+            <p></p>
+            <p class="line-h maggin-b0">또 가고싶고, 놀러가고 싶고, 친구를 데려가고 싶은 </p>
+            <p></p>
+            <p class="line-h maggin-b0">추억이 될 수 있는 공간을 만드려고 항상 노력중입니다.</p>
+             </b>
+        </div>
+
+        <div class="space2"></div>
+
+    </div>
+
+    <div type="scetion" style="height: 750px;" class="section_wrap t-center">
+        <div style="background-image:url(https://cdn.imweb.me/thumbnail/20211011/869e6190030a0.jpg); background-color:#dddddd; background-repeat : no-repeat; background-size : cover; background-position : 50% 50%; height: 100%;">
+            
+            <div style="background-color: rgba(0,0,0,0.19); height: 100%;">
+            <div style="height: 350px;"></div>
+            <a></a>
+            <a></a>
+            <b><a class="font-s72 font-color3 t-center">INTERIOR</a></b>
+
+            </div>
+        </div>
+    </div>
+
+    <div type="scetion" style="height: 2211.15px; ">
+        <!--그리드 부모-->
+        <div style="display: grid; justify-content:center; ">
+
+            <div style="max-width: 1250px;">
+            
+            <div class="space"></div>
+
+            
+            <!--첫번째 칸-->
+            <div id="text6">
+            
+                <div class="rela left inside">
+                    <div>
+                        <b><p class="font-s30 maggin-b0 " >BEFORE_</p></b>
+                    </div>
+
+                    <div class="holder left " style="padding: 15px 0;">
+                        <hr class="hr-color">
+                    </div>
+                    
+                    <div class="rela left">
+                        <img src="https://cdn.imweb.me/thumbnail/20211011/f3cc13b074544.jpg" class="imge-size">
+                    </div>
+                </div>
+
+                <div class="rela left inside">
+
+                    <div>
+                        <b><p class="font-s30 maggin-b0">AFTER_</p></b>
+                    </div>
+
+                    <div class="holder left" style="padding: 15px 0;">
+                        <hr class="hr-color">
+                    </div>
+
+                    <div class="rela left">
+                        <img src="https://cdn.imweb.me/thumbnail/20211011/2b8251791bff7.jpg" class="imge-size">
+                    </div>
+                </div>
+
+            </div>
+            </div>
+            
+            <!--두번째 칸-->
+            <div>
+                <div class="rela left inside">
+                    <img src="https://cdn.imweb.me/thumbnail/20211011/aa0539720c5aa.jpg " class="imge-size">
+                </div>
+
+                <div class="rela left inside">
+                    <img src="https://cdn.imweb.me/thumbnail/20211011/d281f6568fc57.jpg" class="imge-size">
+                </div>
+                
+            
+            </div>
+
+            <!--세번째 칸-->
+
+            <div>
+                <div class="rela left inside">
+                    <img src="https://cdn.imweb.me/thumbnail/20211011/ce0ee82fc2157.jpg" class="imge-size">
+                </div>
+                <div class="rela left inside">
+                    <img src="https://cdn.imweb.me/thumbnail/20211011/bbc2f0c83c87f.jpg"class="imge-size">
+                </div>
+            </div>
+
+            <!--네번째 칸-->
+
+            <div>
+                <div class="rela left inside">
+                    <img src="https://cdn.imweb.me/thumbnail/20211011/7d77f53985ced.jpg" class="imge-size">
+                </div>
+                
+                <div class="rela left inside">
+                    <img src="https://cdn.imweb.me/thumbnail/20211011/29b72665bb973.jpg" class="imge-size">
+                </div>
+
+            </div>
+        
+            <div class="space2">
+            </div>
+
+        </div>
+        
+
+      
+    </div>
+
+
+
+
+    <div type="scetion" style="height: 557.99px;" class="back-color">
+        
+    </div>
+
+  <div id="footer">
+            <div id="f_icon">
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                    </svg></a>
+                <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                </svg>
+                </a>
+            </div>
+            <div id="f_menu">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">MEMBERSHIP</a></li>
+                    <li><a href="">CLASS</a></li>
+                    <li><a href="">SCHEDULE</a></li>
+                    <li><a href="">STORE</a></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">LET'S TALK</a></li>
+                </ul>
+            </div>
+            <div id="f_content">
+                <p>더플라스틱 클라이밍/ 김덕화</p>
+                <p>사업자등록번호 : 102-16-70180 ㅣ 통신판매업 신고번호 :2023-서울강서-0281호</p>
+                <p>27, Gonghang-daero 81-gil, Gangseo-gu, Seoul, Republic of Korea </p>
+                <p> +82 (0)2-6084-8890 ㅣ theplastik2@naver.com</p>
+            </div>
+            <div id="f_navi">
+                <ul>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">사업자정보확인</a></li>
+                </ul>
+            </div>
+            <div id="copyright">
+                <p>
+                    Copyright ⓒ 2023 더플라스틱 THE PLASTIK CLIMBING GYM All rights reserved.
+                </p>
+            </div>
+            <div id="google">
+                <a href="" class="g_btn">
+                    <div id="btn_img">  
+                        <img src="https://www.theplastik.co.kr/common/img/google_play_logo.png" width="25px">
+                    </div>
+                    <div id="btn_txt">
+                        <p id="txt1">Android app on</p>
+                        <p id="txt2">GOOLE PLAY</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <a class="katalk_fix" href="https://accounts.kakao.com/login/?continue=http%3A%2F%2Fpf.kakao.com%2F_kmxfCb%2Fchat%3Fapi_ver%3D1.1%26kakao_agent%3Dsdk%252F1.43.1%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fwww.theplastik.co.kr%26app_key%3D64b9177d37c136abfaf1b400f72d0516%26referer%3Dhttps%253A%252F%252Fwww.theplastik.co.kr%252Fonedayclass" target="_blank">
+            <img src="https://developers.kakao.com/assets/img/about/logos/channel/consult_small_yellow_pc.png">
+        </a>
+
+</body>
+
+
+
+</html>
