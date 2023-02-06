@@ -29,13 +29,13 @@
                 <div id="h_menu">
                     <ul id="menu">
                         <li>
-                            <a href="">HOME</a>
+                            <a href="./토이프로젝트2.html">HOME</a>
                         </li>
                         <li>
                             <a href="">ABOUT</a>
                             <ul>
                                 <li><a href="">클라이밍이란?</a></li>
-                                <li><a href="">더플라스틱</a></li>
+                                <li><a href="./About1.html">더플라스틱</a></li>
                                 <li><a href="">지점소개</a></li>
                             </ul>
                         </li>
@@ -49,7 +49,7 @@
                             <a href="">CLASS</a>
                             <ul>
                                 <li><a href="">처음 오시는 분</a></li>
-                                <li><a href="">일일체험</a></li>
+                                <li><a href="./onedayclass.html">일일체험</a></li>
                                 <li><a href="">스타터패키지</a></li>
                                 <li><a href="">테크닉반</a></li>
                                 <li><a href="">걸프렌즈</a></li>
@@ -84,16 +84,16 @@
                 </div>
                 <div id="h_right">
                     <div id="right_icon">
-                        <a href="">
+                        <span class="hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
                             <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
                             </svg>
-                        </a>
-                        <a href="">
+                        </span>
+                        <span class="hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                             </svg>
-                        </a>
+                        </span>
                     </div>
                     <div id="right_text">
                         <!-- Button trigger modal -->
@@ -101,93 +101,68 @@
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModa2">Register</button>
                         <span>|</span>
                     </div>
-                    
-                    
-                    
                 </div>
             </div>
         </div>
 
-  
-    <!-- Modal -->
+        <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         
         
         <div class="modal-dialog" role="document" style="width: 370px;"> 
 
-        <div class="modal-content" style="display: inline-block;
-        margin: 80px auto;">
-            <div class="modal-header" style="border-bottom: 0;">
+            <div class="modal-content" style="display: inline-block;
+            margin: 80px auto;">
+                <div class="modal-header" style="border-bottom: 0;">
+                    <h2 class="modal-title" id="exampleModalLabel">로그인</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
 
-                
-            <h2 class="modal-title" id="exampleModalLabel">로그인</h2>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            
-            </div>
-
-            <div class="modal-body">
-                <article class="">
-                
-                    <form action="" method="post" target="hidden_frame">
-                        <input type="hidden" name="back_url" value="Lw%3D%3D" >
-                        <input type="hidden" name="back_url_auth" value="">
-                        <input type="hidden" name="used_login_btn" value="Y">
-                
-                        <div class="input_block">
-                            <div> 
-                                <input title="이메일" type="text" name="uid" value="" placeholder="이메일" class="input-1">
+                <div class="modal-body">
+                    <article class="">
+                        <form action="" method="post" target="hidden_frame">
+                            <input type="hidden" name="back_url" value="Lw%3D%3D" >
+                            <input type="hidden" name="back_url_auth" value="">
+                            <input type="hidden" name="used_login_btn" value="Y">
+                            <div class="input_block">
+                                <div> 
+                                    <input title="이메일" type="text" name="uid" value="" placeholder="이메일" class="input-1">
+                                </div>
+                                <div> 
+                                    <input title="비밀번호" name="passwd" type="password" value="" placeholder="비밀번호" autocomplete="off" class="input-1">
+                                </div>
+                            </div> 
+                            <div class="cheak_article">
+                                <div class="checkbox checkbox-styled">
+                                    <label class="form-label">
+                                        <input type="checkbox" class="ie" name="auto_login" data-type="use" value="ok" checked="checked">
+                                        <span class="agree_tit">로그인상태유지</span>
+                                    </label>
+                                </div>
                             </div>
-                            <div> 
-                                <input title="비밀번호" name="passwd" type="password" value="" placeholder="비밀번호" autocomplete="off" class="input-1">
-                            </div>
-                        </div> 
-                
-                        <div class="cheak_article">
-                            <div class="checkbox checkbox-styled">
-                                <label class="form-label">
-                                    <input type="checkbox" class="ie" name="auto_login" data-type="use" value="ok" checked="checked">
-                                    <span class="agree_tit">로그인상태유지</span>
-                                </label>
-                            </div>
+                            <p class="back-color2">
+                                <button class="btn btn-primary1" style="font-size: 14px; color:white; ">로그인</button>
+                            </p>
+                        </form>
+                        <div style="margin-top: 10px !important;">
+                            <a href="" onclick="" style="text-decoration: none; color: #000;">회원가입</a>      
+                            <a href="" onclick="" style="float: right; text-decoration: none; color: #000;">아이디 · 비밀번호 찾기</a> 
                         </div>
-                
-                        <p class="back-color2">
-                            <button class="btn btn-primary1" style="font-size: 14px; color:white; ">로그인</button>
-                        </p>
-                    </form>
-                
-                    <div style="margin-top: 10px !important;">
-                        <a href="" onclick="" style="text-decoration: none; color: #000;">회원가입</a>		
-                        <a href="" onclick="" style="float: right; text-decoration: none; color: #000;">아이디 · 비밀번호 찾기</a> 
-                    </div>
-                
-                    
-                    <div class="divider t-center">
-                        <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
-                    </div>
-
-                
-
-                    <div>
-                        <p><a class="btn btn-primary1 btn-naver " href="">네이버로 시작하기</a></p>
-                        <p><a class="btn btn-primary1 btn-kakao" id="custom-login-btn" href="">카카오로 시작하기</a></p>
-                    </div>
-                
-                    <div class="divider t-center">
-                        <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
-                    </div>
-
-                    <p style="background-color: rgb(131, 147, 167);"><a class="btn btn-primary1" style="font-size: 14px; color:white;" href="" onclick="">비회원 주문예약 조회</a></p>
-                        
-                        
-                        
+                        <div class="divider t-center">
+                            <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
+                        </div>
+                        <div>
+                            <p><a class="btn btn-primary1 btn-naver " href="">네이버로 시작하기</a></p>
+                            <p><a class="btn btn-primary1 btn-kakao" id="custom-login-btn" href="">카카오로 시작하기</a></p>
+                        </div>
+                        <div class="divider t-center">
+                            <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
+                        </div>
+                        <p style="background-color: rgb(131, 147, 167);"><a class="btn btn-primary1" style="font-size: 14px; color:white;" href="" onclick="">비회원 주문예약 조회</a></p>
+                </div>
             </div>
-
-        </div>
-
         </div>
     </div>
 
@@ -195,49 +170,51 @@
     
     <!-- Modal2 -->
     <div class="modal fade" id="exampleModa2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        
-        
         <div class="modal-dialog" role="document" style="width: 370px;"> 
-
-        <div class="modal-content" style="display: inline-block;
-        margin: 80px auto;">
-            <div class="modal-header" style="border-bottom: 0;">
-
-                
-            <h2 class="modal-title modal-t" id="exampleModalLabel">회원가입</h2>
-
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-
-            <div class="modal-body">
-                
-                        <p style="border: 0.5px solid #e5e7eb;">
-                            <button class="btn btn-primary1" style="font-size: 14px;">ID/PW 회원가입</button>
-                        </p>
+            <div class="modal-content" style="display: inline-block;
+            margin: 80px auto;">
+                <div class="modal-header" style="border-bottom: 0;">
+                    <h2 class="modal-title modal-t" id="exampleModalLabel">회원가입</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
                     
-                
+                            <p style="border: 0.5px solid #e5e7eb;">
+                                <button class="btn btn-primary1" style="font-size: 14px;">ID/PW 회원가입</button>
+                            </p>
+                        
                     
-                    <div class="divider t-center">
-                        <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
-                    </div>
+                        
+                        <div class="divider t-center">
+                            <div class="border"></div>또는<div class="border right" style="left: auto; right: 0;"></div>
+                        </div>
 
-                    <div>
-                        <p><a class="btn btn-primary1 btn-naver " href="">네이버로 시작하기</a></p>
-                        <p><a class="btn btn-primary1 btn-kakao" id="custom-login-btn" href="">카카오로 시작하기</a></p>
-                    </div>
-                
-                
-                        
-                        
+                        <div>
+                            <p><a class="btn btn-primary1 btn-naver " href="">네이버로 시작하기</a></p>
+                            <p><a class="btn btn-primary1 btn-kakao" id="custom-login-btn" href="">카카오로 시작하기</a></p>
+                        </div>
+                </div>
             </div>
-
-        </div>
-
         </div>
     </div>
-
+    
+    <div id="hidden">
+        <div id="hidden_inner">
+            <input type="text" placeholder="검색">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+            </span>
+        </div>
+        <div id="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+            </svg>
+        </div>
+    </div>
 
 
     </header>
@@ -527,65 +504,61 @@
         
     </div>
 
-  <div id="footer">
-            <div id="f_icon">
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                    </svg></a>
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                </svg>
-                </a>
-            </div>
-            <div id="f_menu">
-                <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT</a></li>
-                    <li><a href="">MEMBERSHIP</a></li>
-                    <li><a href="">CLASS</a></li>
-                    <li><a href="">SCHEDULE</a></li>
-                    <li><a href="">STORE</a></li>
-                    <li><a href="">NOTICE</a></li>
-                    <li><a href="">LET'S TALK</a></li>
-                </ul>
-            </div>
-            <div id="f_content">
-                <p>더플라스틱 클라이밍/ 김덕화</p>
-                <p>사업자등록번호 : 102-16-70180 ㅣ 통신판매업 신고번호 :2023-서울강서-0281호</p>
-                <p>27, Gonghang-daero 81-gil, Gangseo-gu, Seoul, Republic of Korea </p>
-                <p> +82 (0)2-6084-8890 ㅣ theplastik2@naver.com</p>
-            </div>
-            <div id="f_navi">
-                <ul>
-                    <li><a href="">이용약관</a></li>
-                    <li><a href="">개인정보처리방침</a></li>
-                    <li><a href="">사업자정보확인</a></li>
-                </ul>
-            </div>
-            <div id="copyright">
-                <p>
-                    Copyright ⓒ 2023 더플라스틱 THE PLASTIK CLIMBING GYM All rights reserved.
-                </p>
-            </div>
-            <div id="google">
-                <a href="" class="g_btn">
-                    <div id="btn_img">  
-                        <img src="https://www.theplastik.co.kr/common/img/google_play_logo.png" width="25px">
-                    </div>
-                    <div id="btn_txt">
-                        <p id="txt1">Android app on</p>
-                        <p id="txt2">GOOLE PLAY</p>
-                    </div>
-                </a>
-            </div>
+    <div id="footer">
+        <div id="f_icon">
+            <a href="https://instagram.com/jiyeonu.u?igshid=ZDdkNTZiNTM=" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                </svg></a>
+            <a href="https://map.naver.com/v5/entry/place/1503413539?placePath=%2Fhome" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+            </a>
         </div>
-
-        <a class="katalk_fix" href="https://accounts.kakao.com/login/?continue=http%3A%2F%2Fpf.kakao.com%2F_kmxfCb%2Fchat%3Fapi_ver%3D1.1%26kakao_agent%3Dsdk%252F1.43.1%2520os%252Fjavascript%2520sdk_type%252Fjavascript%2520lang%252Fko-KR%2520device%252FWin32%2520origin%252Fhttps%25253A%25252F%25252Fwww.theplastik.co.kr%26app_key%3D64b9177d37c136abfaf1b400f72d0516%26referer%3Dhttps%253A%252F%252Fwww.theplastik.co.kr%252Fonedayclass" target="_blank">
-            <img src="https://developers.kakao.com/assets/img/about/logos/channel/consult_small_yellow_pc.png">
-        </a>
+        <div id="f_menu">
+            <ul>
+                <li><a href="./토이프로젝트2.html">HOME</a></li>
+                <li><a href="./About1.html">ABOUT</a></li>
+                <li><a href="">MEMBERSHIP</a></li>
+                <li><a href="">CLASS</a></li>
+                <li><a href="">SCHEDULE</a></li>
+                <li><a href="">STORE</a></li>
+                <li><a href="">NOTICE</a></li>
+                <li><a href="">LET'S TALK</a></li>
+            </ul>
+        </div>
+        <div id="f_content">
+            <p>더플라스틱 클라이밍/ 김덕화</p>
+            <p>사업자등록번호 : 102-16-70180 ㅣ 통신판매업 신고번호 :2023-서울강서-0281호</p>
+            <p>27, Gonghang-daero 81-gil, Gangseo-gu, Seoul, Republic of Korea </p>
+            <p> +82 (0)2-6084-8890 ㅣ theplastik2@naver.com</p>
+        </div>
+        <div id="f_navi">
+            <ul>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">사업자정보확인</a></li>
+            </ul>
+        </div>
+        <div id="copyright">
+            <p>
+                Copyright ⓒ 2023 더플라스틱 THE PLASTIK CLIMBING GYM All rights reserved.
+            </p>
+        </div>
+        <div id="google">
+            <a href="" class="g_btn">
+                <div id="btn_img">  
+                    <img src="https://www.theplastik.co.kr/common/img/google_play_logo.png" width="25px">
+                </div>
+                <div id="btn_txt">
+                    <p id="txt1">Android app on</p>
+                    <p id="txt2">GOOLE PLAY</p>
+                </div>
+            </a>
+        </div>
+    </div>
 
 </body>
 

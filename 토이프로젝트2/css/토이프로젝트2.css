@@ -276,7 +276,6 @@ button:focus {
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid rgba(255, 255, 255, 0.5);
     cursor: pointer;
-
 }
 /* 컨텐츠2 */
 #content_2>div {

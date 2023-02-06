@@ -1,7 +1,6 @@
 body{
     margin: 0;
     display: block;
-
     scroll-behavior: auto;
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -491,46 +490,44 @@ p{
     #menu>li>ul a{
         padding: 0 10px;
     }
-    /* 아이콘 */
-    #h_right {
-        width: 319px;
-    }
-    #h_right>div {
-        float: right;
-    }
-    #right_text {
-        line-height: 70px;
-    }
-    #right_icon {
-        line-height: 67px;
-    }
-    #h_right a {
-        margin: 5px;
-        text-decoration: none;
-        color: black;
-    }
-    #h_right span {
-        color: gray;
-    }
+   /* 아이콘 */
+#h_right {
+    width: 319px;
+}
+#h_right>div {
+    float: right;
+}
+#right_text {
+    line-height: 70px;
+}
+#right_icon {
+    line-height: 67px;
+}
+#h_right span.hidden {
+    margin: 5px;
+    text-decoration: none;
+    color: black;
+}
+#h_right span {
+    color: gray;
+}
 
-    /*모달 아이콘*/
-    #h_right button {
-        background: white;
-        border: none;
-        color: black;
-        margin: 0;
-        padding: 5px;
-        font-size: 13px;
-    }
+/* 모달 아이콘 */
+#h_right button {
+    background: white;
+    border: none;
+    color: black;
+    margin: 0;
+    padding: 5px;
+    font-size: 13px;
+}
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25) !important; 
+}
 
-    button:focus {
-        outline: none;
-        box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25) !important; 
-    }
  
-    
-    
-    /* ---푸터부분--- */
+   /* ---푸터부분--- */
 #footer {
     height: 364px;
     width: 100%;
@@ -543,8 +540,12 @@ p{
     text-align: center;
 }
 /* 푸터아이콘 */
+#f_icon {
+    margin-bottom: 5px;
+}
 #f_icon>a {
     margin: 10px;
+    color: white;
 }
 /* 푸터메뉴 */
 #f_menu>ul {
@@ -607,6 +608,9 @@ p{
 .g_btn>div {
     padding: 5px;
 }
+#btn_img {
+    line-height: 33px;
+}
 .g_btn p {
     text-decoration: none;
     color: white;
@@ -619,10 +623,73 @@ p{
     font-size: 15px;
     font-weight: bold;
 }
+.g_btn:hover{
+    text-decoration: none;
+}
 
 .katalk_fix{
     position: fixed;
     top: 93%;
     left: 93%;
 }
+/* ---히든서치창--- */
+#hidden {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+#hidden_inner {
+    position: fixed;
+    left: 50%;
+    transform: translateX( -50% );
+    top: 20%;
+    margin: auto;
+}
+#hidden span {
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+#hidden span:hover {
+    cursor: pointer;
+}
+#hidden input {
+    background-color: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid white;
+    padding: 15px 35px 15px 0;
+    box-sizing: border-box;
+    width: 740px;
+    height: 65px;
+    font-size: 25px;
+    color: white;
+}
+#hidden input:focus {
+    outline: none;
+}
+#close {
+    width: auto;
+    height: auto;
+    padding: 30px;
+    position: fixed;
+    right: 0;
+    color: white;
+}
+#close>svg {
+    cursor: pointer;
+}
 
+
+/*추가분*/
+#hidden span>svg{
+    position: absolute;
+    right: 0;
+    top: 40%;
+}

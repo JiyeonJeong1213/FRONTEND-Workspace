@@ -159,15 +159,18 @@ $(function(){
     });
 
     /* 두둥효과 */
-        $(window).scroll(function(){
-            let h = $(document).scrollTop(); // 스크롤 위치
-            h = (h+500);
-            let text6Y = $("#content_2").offset().top; 
-            if(h >= text6Y){
-            $("#content_2").find("h5").addClass("text-m1");
-            $("#content_2").find("hr").addClass("text-m1");
-            }
-        })
+    $(window).scroll(function(){
+        let h = $(document).scrollTop(); // 스크롤 위치
+        let y = $(window).height();
+
+        h = (h+y);
+
+        let text6Y = $("#content_2").offset().top; 
+        if(h >= text6Y){
+        $("#content_2").find("h5").addClass("text-m1");
+        $("#content_2").find("hr").addClass("text-m1");
+        }
+    })
 
     // content3
     /* 더보기 클릭하면 펼쳐지게 */ 
