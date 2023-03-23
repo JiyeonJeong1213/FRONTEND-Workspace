@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>글쓰기 페이지</title>
+    <title>수정하기페이지</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -122,11 +122,10 @@
         }
         #title-area input {
             border: 2px solid rgb(204, 204, 204);
-            width: 888px;
+            width: 735px;
             height: 40px;
             color: black;
             font-size: 15px;
-            text-align: center;
             border-radius: 5px;
         }
         #content-area>textarea {
@@ -217,7 +216,7 @@
 
             <form action="" method="post">
                 <div id="button-area">
-                    <div id="title">글쓰기</div>
+                    <div id="title">수정하기</div>
                     <div id="buttons">
                         <button type="button" id="cancel" onclick="cancel()">취소</button>
                         <button type="submit" id="register">등록</button>
@@ -543,7 +542,11 @@
                         <option>청주시</option>
                         <option>충주시</option>
                     </select>
-                    <input type="text" name="title" size="100">
+                    <input type="text" name="title" size="100" placeholder="제목을 입력해주세요.">
+                    <select name="sale" id="sale">
+                        <option>판매중</option>
+                        <option>판매완료</option>
+                    </select>
                 </div>
                 <div id="content-area">
                     <textarea name="content" id="content-main" placeholder="내용을 입력해주세요."></textarea>

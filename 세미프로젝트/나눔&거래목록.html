@@ -111,6 +111,12 @@
             position: absolute;
             right: 0;
         }
+        #search-area select:focus {
+            outline: none;
+        }
+        #search-area input:focus {
+            outline: none;
+        }
         .paging-area {
             text-align: center;
         }
@@ -560,7 +566,7 @@
                         <option>청주시</option>
                         <option>충주시</option>
                     </select>
-                    <input type="text" size="30" placeholder="제목/내용 검색">
+                    <input type="text" name="search3" size="30" placeholder="제목/내용 검색">
                     <button type="submit" id="search-btn">검색</button>
                 </form>
                 <script>
@@ -578,6 +584,7 @@
                             // 내 코드
                             for(let i= 1; i <= 17; i++){
                                 if($(".search1 option:selected").val() == $(".search1 option").eq(i).val()){
+                                    $(".search2").css("display", "none");
                                     $(".search2").eq(i-1).css("display", "inline");
                                 }
                             }
