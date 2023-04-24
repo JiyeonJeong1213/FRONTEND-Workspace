@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            justify-content: center;
+        }
+        .container {
+                margin: auto;
+                padding: 10px;
+                width: 900px;
+           }
+   
+           .master_title {
+               border-bottom: #FFD133 solid;
+               width: 250px;
+               font-weight: bold;
+               text-align: center;
+           }
+   
+           .chat-list {
+               width: 100%;
+           }
+   
+           .chat-list tr, .chat-list td, .chat-list th{
+               text-align: center;
+               border: 1px solid gray;
+   
+           }
+           .chat-list>tbody>tr:hover{
+               cursor:pointer;
+           }
+   </style>
+</head>
+<body>
+    <div class="container">
+            <h2 class="master_title">채팅 목록</h2>
+            
+            <table class="chat-list">
+                <thead>
+                    <tr style="background-color: rgb(190, 187, 187);">
+                        <th width="150px" height="35px">대화상대</th>
+                        <th width="500px">최근 메세지</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>나랑</td>
+                        <td>하하하</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
